@@ -26,10 +26,10 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/hero-bg.png', // Fallback to hero image, ensure this exists or use a dedicated OG image
+        url: '/images/reallogo.png',
         width: 1200,
         height: 630,
-        alt: '3D Fence & Welding Projects in Houston',
+        alt: '3D Fence & Welding Logo',
       },
     ],
   },
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "3D Fence & Welding | Houston's Trust Fence Contractor",
     description: "Expert fence installation, custom gates, and welding services in Houston, TX. Licensed & Insured.",
-    images: ['/images/hero-bg.png'],
+    images: ['/images/reallogo.png'],
   },
   icons: {
     icon: '/images/logo-icon.svg',
