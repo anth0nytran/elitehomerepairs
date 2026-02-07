@@ -124,7 +124,7 @@ export function LeadCaptureModal({
                                             type="tel"
                                             required
                                             className="w-full rounded-lg border-2 border-slate-100 bg-slate-50/50 px-4 py-3 text-sm font-medium text-slate-900 placeholder:text-slate-400 focus:border-slate-300 focus:bg-white focus:outline-none transition-all"
-                                            placeholder="(281) 555-0176"
+                                            placeholder="(713) 555-0176"
                                         />
                                     </div>
 

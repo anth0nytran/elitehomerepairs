@@ -63,9 +63,9 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, error: 'Invalid request body.' }, { status: 400 });
   }
 
-  // ══════════════════════════════════════════════════════════════════════════
+  // --------------------------------------------------------------------------
   // SPAM PROTECTION - Tier 1: Honeypots, Time Validation, Content Filtering
-  // ══════════════════════════════════════════════════════════════════════════
+  // --------------------------------------------------------------------------
 
   // 1. Honeypot checks - multiple trap fields bots commonly fill
   const honeypotFields = ['website', 'company_url', 'fax', 'address2'];
@@ -176,19 +176,10 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: true }, { status: 200 });
   }
 
-  // ══════════════════════════════════════════════════════════════════════════
+  // --------------------------------------------------------------------------
   // END SPAM PROTECTION
-  // ══════════════════════════════════════════════════════════════════════════
+  // --------------------------------------------------------------------------
 
-
-  const resendApiKey = process.env.RESEND_API_KEY;
-  const toEmail = process.env.LEAD_TO_EMAIL;
-  if (!resendApiKey || !toEmail) {
-    return NextResponse.json(
-      { ok: false, error: 'Server misconfigured. Missing RESEND_API_KEY or LEAD_TO_EMAIL.' },
-      { status: 500 }
-    );
-  }
 
   const timestamp = new Intl.DateTimeFormat('en-US', {
     timeZone: 'America/Chicago',
@@ -202,7 +193,12 @@ export async function POST(req: Request) {
   }).format(new Date());
   const safeName = name || 'Website Form';
   const safeService = service || 'Website Form';
-  const subject = `🚨 New Lead 🚨 ${safeService} | ${safeName}`;
+  const brandName = 'Elite Home Repairs';
+  const brandAddress = '4102 Valley Haven Dr, Kingwood, TX 77339';
+  const brandPrimary = '#1e3a8a';
+  const brandAccent = '#ea580c';
+  const fromEmail = process.env.LEAD_FROM_EMAIL || 'Elite Home Repairs <leads@quicklaunchweb.us>';
+  const subject = `New Lead: ${safeService} | ${safeName}`;
 
   const pageUrlIsDev =
     !!page &&
@@ -235,28 +231,28 @@ export async function POST(req: Request) {
   const text = textLines.join('\n');
   const escapedMessage = message ? escapeHtml(message).replace(/\n/g, '<br />') : '';
   const html = `
-  <div style="background-color:#f3f4f6;margin:0;padding:24px 12px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#111827;">
+  <div style="background-color:#e2e8f0;margin:0;padding:24px 12px;font-family:'Barlow','Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#0f172a;">
     <span style="display:none!important;visibility:hidden;opacity:0;color:transparent;height:0;width:0;overflow:hidden;">
-      New quote request from ${escapeHtml(safeName)} — tap to call now.
+      New quote request from ${escapeHtml(safeName)}. Respond quickly.
     </span>
-    <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;margin:0 auto;background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;box-shadow:0 10px 25px rgba(17,24,39,0.08);overflow:hidden;">
+    <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="max-width:640px;margin:0 auto;background:#ffffff;border:1px solid #cbd5e1;border-radius:16px;box-shadow:0 14px 36px rgba(2,6,23,0.18);overflow:hidden;">
       <tr>
-        <td style="background:#ffffff;color:#111827;padding:18px 20px;border-top:6px solid #ff7a00;border-bottom:1px solid #f1f5f9;">
+        <td style="background:${brandPrimary};color:#ffffff;padding:18px 20px;border-bottom:4px solid ${brandAccent};">
           <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
             <tr>
-              <td style="font-size:16px;font-weight:700;letter-spacing:0.3px;">3D Fencing &amp; Gate</td>
+              <td style="font-size:18px;font-weight:800;letter-spacing:0.4px;text-transform:uppercase;">${brandName}</td>
               <td align="right">
-                <span style="display:inline-block;background:#ff7a00;color:#111827;font-weight:700;font-size:12px;padding:6px 10px;border-radius:999px;letter-spacing:1px;">NEW LEAD</span>
+                <span style="display:inline-block;background:${brandAccent};color:#ffffff;font-weight:800;font-size:11px;padding:7px 10px;border-radius:999px;letter-spacing:1.2px;">NEW LEAD</span>
               </td>
             </tr>
           </table>
         </td>
       </tr>
       <tr>
-        <td style="padding:24px 20px 16px;">
-          <div style="font-size:24px;font-weight:800;margin:0 0 6px;">${escapeHtml(safeName)}</div>
-          <div style="font-size:16px;color:#374151;font-weight:600;margin:0 0 4px;">${escapeHtml(safeService)}</div>
-          <div style="font-size:12px;color:#6b7280;">${escapeHtml(timestamp)}</div>
+        <td style="padding:24px 20px 14px;">
+          <div style="font-size:25px;font-weight:800;line-height:1.2;margin:0 0 6px;color:#0f172a;">${escapeHtml(safeName)}</div>
+          <div style="font-size:15px;color:${brandPrimary};font-weight:700;margin:0 0 5px;">${escapeHtml(safeService)}</div>
+          <div style="font-size:12px;color:#64748b;">${escapeHtml(timestamp)}</div>
         </td>
       </tr>
       <tr>
@@ -264,20 +260,20 @@ export async function POST(req: Request) {
           <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
             <tr>
               <td style="padding:0 0 10px;">
-                <a href="tel:${escapeHtml(phoneLink || phone)}" style="display:block;background:#ff7a00;color:#111827;text-decoration:none;font-weight:800;font-size:14px;text-align:center;padding:14px 18px;border-radius:10px;">
+                <a href="tel:${escapeHtml(phoneLink || phone)}" style="display:block;background:${brandAccent};color:#ffffff;text-decoration:none;font-weight:800;font-size:14px;text-align:center;padding:14px 18px;border-radius:10px;">
                   Hold to Call Lead
                 </a>
               </td>
             </tr>
             <tr>
               <td style="padding:0 0 10px;">
-                <a href="mailto:${escapeHtml(email)}" style="display:block;background:#111827;color:#ffffff;text-decoration:none;font-weight:700;font-size:14px;text-align:center;padding:14px 18px;border-radius:10px;">Email Lead</a>
+                <a href="mailto:${escapeHtml(email)}" style="display:block;background:${brandPrimary};color:#ffffff;text-decoration:none;font-weight:700;font-size:14px;text-align:center;padding:14px 18px;border-radius:10px;">Email Lead</a>
               </td>
             </tr>
             ${pageUrlDisplay ? `
             <tr>
               <td style="padding:0;">
-                <a href="${page}" style="font-size:12px;color:#ff7a00;text-decoration:none;">View Page</a>
+                <a href="${escapeHtml(page)}" style="font-size:12px;color:${brandAccent};text-decoration:none;">View Page</a>
               </td>
             </tr>
             ` : ''}
@@ -286,24 +282,24 @@ export async function POST(req: Request) {
       </tr>
       <tr>
         <td style="padding:0 20px 20px;">
-          <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+          <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="border:1px solid #dbe5f3;border-radius:12px;overflow:hidden;">
             <tr>
-              <td style="background:#f9fafb;padding:14px 16px;font-weight:700;border-bottom:1px solid #e5e7eb;">Lead Details</td>
+              <td style="background:#eff6ff;padding:14px 16px;font-weight:800;border-bottom:1px solid #dbe5f3;color:${brandPrimary};">Lead Details</td>
             </tr>
             <tr>
               <td style="padding:0 16px;">
                 <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="font-size:14px;">
-                  <tr><td style="padding:10px 0;color:#6b7280;width:120px;">Name</td><td style="padding:10px 0;color:#111827;font-weight:600;">${escapeHtml(safeName)}</td></tr>
-                  <tr><td style="padding:10px 0;color:#6b7280;">Phone</td><td style="padding:10px 0;"><a href="tel:${escapeHtml(phoneLink || phone)}" style="color:#111827;text-decoration:none;font-weight:600;">${escapeHtml(phone)}</a></td></tr>
-                  <tr><td style="padding:10px 0;color:#6b7280;">Email</td><td style="padding:10px 0;"><a href="mailto:${escapeHtml(email)}" style="color:#111827;text-decoration:none;font-weight:600;">${escapeHtml(email)}</a></td></tr>
-                  <tr><td style="padding:10px 0;color:#6b7280;">Service</td><td style="padding:10px 0;color:#111827;font-weight:600;">${escapeHtml(safeService)}</td></tr>
-                  ${pageUrlDisplay ? `<tr><td style="padding:10px 0;color:#6b7280;">Page URL</td><td style="padding:10px 0;"><a href="${page}" style="color:#ff7a00;text-decoration:none;">${escapeHtml(pageUrlDisplay)}</a></td></tr>` : ''}
-                  ${site ? `<tr><td style="padding:10px 0;color:#6b7280;">Site</td><td style="padding:10px 0;"><a href="${escapeHtml(site)}" style="color:#ff7a00;text-decoration:none;">${escapeHtml(site)}</a></td></tr>` : ''}
-                  ${company ? `<tr><td style="padding:10px 0;color:#6b7280;">Company</td><td style="padding:10px 0;color:#111827;font-weight:600;">${escapeHtml(company)}</td></tr>` : ''}
+                  <tr><td style="padding:10px 0;color:#64748b;width:120px;">Name</td><td style="padding:10px 0;color:#0f172a;font-weight:700;">${escapeHtml(safeName)}</td></tr>
+                  <tr><td style="padding:10px 0;color:#64748b;">Phone</td><td style="padding:10px 0;"><a href="tel:${escapeHtml(phoneLink || phone)}" style="color:#0f172a;text-decoration:none;font-weight:700;">${escapeHtml(phone)}</a></td></tr>
+                  <tr><td style="padding:10px 0;color:#64748b;">Email</td><td style="padding:10px 0;"><a href="mailto:${escapeHtml(email)}" style="color:#0f172a;text-decoration:none;font-weight:700;">${escapeHtml(email)}</a></td></tr>
+                  <tr><td style="padding:10px 0;color:#64748b;">Service</td><td style="padding:10px 0;color:#0f172a;font-weight:700;">${escapeHtml(safeService)}</td></tr>
+                  ${pageUrlDisplay ? `<tr><td style="padding:10px 0;color:#64748b;">Page URL</td><td style="padding:10px 0;"><a href="${escapeHtml(page)}" style="color:${brandAccent};text-decoration:none;">${escapeHtml(pageUrlDisplay)}</a></td></tr>` : ''}
+                  ${site ? `<tr><td style="padding:10px 0;color:#64748b;">Site</td><td style="padding:10px 0;"><a href="${escapeHtml(site)}" style="color:${brandAccent};text-decoration:none;">${escapeHtml(site)}</a></td></tr>` : ''}
+                  ${company ? `<tr><td style="padding:10px 0;color:#64748b;">Company</td><td style="padding:10px 0;color:#0f172a;font-weight:700;">${escapeHtml(company)}</td></tr>` : ''}
                   <tr>
-                    <td style="padding:10px 0;color:#6b7280;vertical-align:top;">Message</td>
-                    <td style="padding:10px 0;color:#111827;">
-                      ${escapedMessage ? `<div style="font-weight:500;">${escapedMessage}</div>` : `<div style="font-style:italic;color:#6b7280;">No message provided.</div>`}
+                    <td style="padding:10px 0;color:#64748b;vertical-align:top;">Message</td>
+                    <td style="padding:10px 0;color:#0f172a;">
+                      ${escapedMessage ? `<div style="font-weight:500;">${escapedMessage}</div>` : `<div style="font-style:italic;color:#64748b;">No message provided.</div>`}
                     </td>
                   </tr>
                 </table>
@@ -314,9 +310,9 @@ export async function POST(req: Request) {
       </tr>
       <tr>
         <td style="padding:0 20px 22px;">
-          <div style="border-left:4px solid #ff7a00;padding:10px 12px;background:#f9fafb;border-radius:8px;font-size:12px;color:#6b7280;">
-            This lead came from your website form.
-            <span style="display:block;margin-top:4px;color:#9ca3af;">Powered by QuickLaunchWeb</span>
+          <div style="border-left:4px solid ${brandAccent};padding:12px;background:#f8fafc;border-radius:8px;font-size:12px;color:#475569;line-height:1.5;">
+            This lead came from the Elite Home Repairs website form.
+            <span style="display:block;margin-top:6px;font-weight:700;color:${brandPrimary};">${brandAddress}</span>
           </div>
         </td>
       </tr>
@@ -324,13 +320,44 @@ export async function POST(req: Request) {
   </div>
   `;
 
+  const resendApiKey = process.env.RESEND_API_KEY;
+  const toEmail = process.env.LEAD_TO_EMAIL;
+  const isProduction = process.env.NODE_ENV === 'production';
+  const isDryRun = process.env.LEAD_DRY_RUN === 'true';
+
+  if (isDryRun || !resendApiKey || !toEmail) {
+    const missingVars = [
+      !resendApiKey ? 'RESEND_API_KEY' : '',
+      !toEmail ? 'LEAD_TO_EMAIL' : '',
+    ].filter(Boolean);
+
+    if (isProduction && !isDryRun && missingVars.length > 0) {
+      return NextResponse.json(
+        { ok: false, error: `Server misconfigured. Missing ${missingVars.join(' and ')}.` },
+        { status: 500 }
+      );
+    }
+
+    return NextResponse.json(
+      {
+        ok: true,
+        mode: 'dry-run',
+        message:
+          missingVars.length > 0
+            ? `Dry run only. Missing ${missingVars.join(' and ')}.`
+            : 'Dry run enabled. Email not sent.',
+      },
+      { status: 200 }
+    );
+  }
+
   const resend = new Resend(resendApiKey);
   const bcc = process.env.LEADS_BCC_EMAIL
     ? process.env.LEADS_BCC_EMAIL.split(',').map((entry) => entry.trim()).filter(Boolean)
     : undefined;
 
   const { error } = await resend.emails.send({
-    from: '3D Fencing & Gate | New Lead <leads@quicklaunchweb.us>',
+    from: fromEmail,
     to: [toEmail],
     bcc,
     replyTo: email || undefined,
@@ -340,7 +367,12 @@ export async function POST(req: Request) {
   });
 
   if (error) {
-    return NextResponse.json({ ok: false, error: 'Failed to send email.' }, { status: 500 });
+    const errorMessage =
+      process.env.NODE_ENV === 'development'
+        ? `Failed to send email: ${error.message || 'Unknown Resend error'}`
+        : 'Failed to send email.';
+
+    return NextResponse.json({ ok: false, error: errorMessage }, { status: 500 });
   }
 
   return NextResponse.json({ ok: true }, { status: 200 });

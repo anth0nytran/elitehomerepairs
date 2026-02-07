@@ -10,108 +10,146 @@ import { ImagePlaceholder } from './components/ImagePlaceholder';
 
 // Inline configuration for standalone usage
 const config = {
-  businessName: '3D Fence & Welding',
-  city: 'Houston, TX',
-  phone: '(281) 748-1111',
-  primaryService: 'Fence Installation & Custom Gates',
-  services: ['Automatic Driveway Gates', 'Electric Gate Openers', 'Commercial & Residential Welding', 'Fence Repair & Maintenance'],
+  businessName: 'Elite Home Repairs',
+  businessOwner: 'Jose Castillo',
+  city: 'Kingwood, TX',
+  address: '4102 Valley Haven Dr, Kingwood, TX 77339',
+  phone: '(713) 283-8138',
+  primaryService: 'Siding Replacement & Repair',
+  services: ['Roofing Services', 'Professional Painting', 'Window Replacement'],
   rating: 5.0,
-  reviewCount: 48,
+  reviewCount: 120,
   yearsInBusiness: 15,
-  ctaPrimary: 'Get a Free Estimate',
+  ctaPrimary: 'Request a Quote',
 
-  // Theme: Clean Modern
+  // Theme: Premium Craftsmanship - Navy & Deep Bronze
   theme: {
     isDark: false,
     colors: {
-      pageBg: '#f4f6f8',
-      cardBg: '#ffffff',
-      surfaceBg: '#edf1f5',
-      textPrimary: '#1c232d',
-      textSecondary: '#4b5a6b',
-      textMuted: '#8a98a8',
-      border: '#dde4ec',
-      borderLight: '#eef2f6',
-      darkBg: '#121821',
+      pageBg: '#f8fafc', // Slate-50: Subtle off-white for depth
+      cardBg: '#ffffff', // Pure white for crisp cards
+      surfaceBg: '#f1f5f9', // Slate-100: Distinct section background
+      textPrimary: '#1e293b', // Slate-800: Softer than pure black
+      textSecondary: '#475569', // Slate-600
+      textMuted: '#94a3b8', // Slate-400
+      border: '#e2e8f0', // Slate-200: Subtle borders
+      borderLight: '#f8fafc',
+      darkBg: '#0f172a', // Slate-900: Rich dark background
       darkText: '#f8fafc',
-      darkTextMuted: '#9aa7b5',
+      darkTextMuted: '#cbd5e1',
     }
   },
 
-  // Accent: Amber
+  // Primary: Elite Navy (Trust, Authority, Professionalism)
   accent: {
-    name: 'Amber',
-    hex: '#f59e0b',
-    hoverHex: '#d97706'
+    name: 'Elite Navy',
+    hex: '#1e3a8a', // Blue-900
+    hoverHex: '#172554' // Blue-950
+  },
+
+  // Action: Artisan Bronze (Quality, warmth, attention)
+  action: {
+    hex: '#ea580c', // Orange-600 (Darker, richer than safety orange)
+    hoverHex: '#c2410c' // Orange-700
+  },
+
+  // Secondary Color for strong headers/branding (Navy Blue)
+  secondary: {
+    hex: '#1e3a8a', // Blue-900
   },
 
   imagePlaceholders: [
-    { label: 'Before Photo', hint: 'Old fence or empty lot' },
-    { label: 'After Photo', hint: 'New cedar or iron install' },
-    { label: 'Crew Photo', hint: 'Fabrication or install team' },
+    { label: 'Before Photo', hint: 'Old siding or roof damage' },
+    { label: 'After Photo', hint: 'Fresh paint or new windows' },
+    { label: 'Crew Photo', hint: 'Jose and team onsite' },
   ],
 
   testimonials: [
     {
-      quote: 'I had an excellent experience with David. His team was professional from start to finish, providing a clear estimate, answering all my questions, and completing the project on schedule. The workmanship is top-notch, and the finished fence looks outstanding. I appreciate their attention to detail and the pride they take in their work. I would gladly recommend them to anyone in need of a quality fence.',
-      name: 'Gustavo Dominguez',
-      highlight: 'Workmanship is top-notch, and the finished fence looks outstanding.',
+      quote: "Can’t say enough about Elite Home Repair... Within a minute, Jose was contacting me... The guys came out riding early... Side wall of my house matched up the exact color Scheme... It is as if my side wall to my house was never missing... Highly recommend Jose and his crew.",
+      name: 'Terrance Matthews',
+      highlight: 'It is as if my side wall to my house was never missing',
+      reviewCount: 6,
+      photos: 3,
     },
     {
-      quote: 'They do great work and on time. David the owner walked us through the whole process and the project came out great. Highly recommended',
-      name: 'Mike Ta',
-      highlight: 'They do great work and on time. Highly recommended.',
+      quote: "Great price. I contacted the company I used to replace the siding on my home because there were a couple of things that needed attention. Jose came out and took care of the problem... I am satisfied and would recommend them to my friends and neighbors.",
+      name: 'Ben Knowles',
+      highlight: 'Of particular concern was whether they would honor their warranty and they did!',
+      reviewCount: 1,
     },
     {
-      quote: 'David and crew were very pleasant to work with. He gave me a very fair quote and worked all day until he finished the job, which was just too difficult for me to handle. I will be calling him again for more jobs.',
-      name: 'Jim',
-      highlight: 'Gave me a very fair quote and worked all day until he finished the job.',
+      quote: "Jose did a great job! I have used his services several times and, as always, he is very professional and does a great job. I recommend him!",
+      name: 'Carlos Sierra',
+      highlight: 'Reasonable price',
+      reviewCount: 7,
     },
     {
-      quote: 'I contacted 3D Fence & Welding for a basic fence estimate, and during our conversation I learned they also offered welding services. I asked if they could create doggie windows for my pittie. David and crew went above and beyond, transforming a simple project into a beautifully crafted cedar wood fence with high-quality welded dog windows. The workmanship is excellent, and the customer service stood out most of all. David truly listened to my vision and brought it to life. Highly recommend and my pittie is happy too 🙂',
-      name: 'Samantha Rodriguez',
-      highlight: 'Beautifully crafted cedar wood fence with high-quality welded dog windows.',
+      quote: "This is 2nd time we brought them back to work on our house they are fast & remarkable of how well they work... Workers are very polite and alert to not leaving any mess behind... We Will be bringing them back again for more projects",
+      name: 'Sherry Murray',
+      highlight: 'Workers are very polite and alert to not leaving any mess behind',
+      reviewCount: 4,
     },
     {
-      quote: 'Great and quality work. When we called back for addressing issue, David came and fix them.',
-      name: 'Astra Code',
-      highlight: 'Great and quality work.',
+      quote: "Reasonable price. I contacted Elite Home Repairs to inquire about a window repair. Jose responded the same day... He and his crew came the following week and completed the job in less than 2 hours.",
+      name: 'Rebecca Havely',
+      highlight: 'Completed the job in less than 2 hours',
+      reviewCount: 6,
+      photos: 9,
     },
     {
-      quote: 'very good communication and does good work.',
-      name: 'Rene Ortiz',
-      highlight: 'Very good communication and does good work.',
+      quote: "Elite Home Repairs replaced all of the siding and rotted wood on the exterior of my two story home... From the promptness of Jose to meet with us and provide a quote, to the beautiful finished appearance... We get so many complements on our home!",
+      name: 'Jane Verkerk',
+      highlight: 'They added the small professional touches that made a siding job a work of art!',
+      reviewCount: 6,
+    },
+    {
+      quote: "On time, polite, professional, efficient. Everything you want with a crew. Great job! Good price! I'll definitely use Elite Home Repairs again! (Repaired, replaced and painted my facia boards for the whole house in one day)",
+      name: 'Russell Dozier',
+      highlight: 'On time, polite, professional, efficient',
+      localGuide: true,
+      reviewCount: 19,
+      photos: 3,
+    },
+    {
+      quote: "Jose did a great job and was able to accommodate my time crunch",
+      name: 'Valorie Tolle',
+      highlight: 'Able to accommodate my time crunch',
+      reviewCount: 5,
+      photos: 1,
+    },
+    {
+      quote: "Great, quick, professional, affordable. Repaired siding.",
+      name: 'Alexandra Stevens',
+      highlight: 'Great, quick, professional, affordable.',
+      reviewCount: 4,
     },
   ],
 
   faqs: [
     {
-      q: 'How much does a new fence cost? Do you provide free estimates?',
-      a: 'We provide 100% free, detailed written estimates. Pricing depends on materials and footage, but we offer widespread options from budget-friendly pine to premium cedar and iron.',
+      q: 'Do you offer free estimates?',
+      a: 'Yes! We provide 100% free, detailed written estimates for all services including siding, roofing, and painting.',
     },
     {
-      q: 'Do you service my neighborhood in Houston?',
-      a: 'We serve all of Houston and surrounding areas including Katy, The Woodlands, Sugar Land, and Cypress for both residential and commercial projects.',
+      q: 'What areas do you serve?',
+      a: 'Our main hub is Kingwood, but we serve Humble, The Woodlands, Houston, Spring, and Atascocita.',
     },
     {
-      q: 'Can you add an automatic opener to my existing driveway gate?',
-      a: 'Yes, we specialize in retrofitting existing gates with LiftMaster operators and solar-powered access systems, as long as the gate structure is sound.',
+      q: 'Are you insured?',
+      a: 'Absolutely. Elite Home Repairs is fully insured for your protection and ours. reliability is our priority.',
     },
     {
-      q: 'What is better for privacy: Cedar wood or Wrought Iron?',
-      a: 'For privacy, Cedar is superior as it creates a solid visual barrier. Wrought iron is best for security and curb appeal without blocking the view.',
+      q: 'What types of siding do you install?',
+      a: 'We specialize in Hardie plank (fiber cement), vinyl, and wood siding installation and repair.',
     },
     {
-      q: 'How fast can you get the job done?',
-      a: 'Most residential projects are completed in 1-3 days depending on linear footage and complexity. We provide a specific timeline with every estimate.',
+      q: 'Can you help with insurance claims for roof damage?',
+      a: 'Yes, we have experience working with insurance companies to help you get the repairs you deserve after storm damage.',
     },
     {
-      q: 'Do you handle the HOA paperwork and City Permits for me?',
-      a: 'Yes. We provide all necessary specs, drawings, and photos for your HOA application. We also handle city permitting for projects that require it.',
-    },
-    {
-      q: 'My fence is leaning—do you do repairs or just new installs?',
-      a: 'We offer comprehensive repair services including storm damage fixes, gate adjustments, post replacement, and rot board repair for wood, iron, and chain link fences.',
+      q: 'Do you paint interiors or just exteriors?',
+      a: 'We do both! From full exterior makeovers to detailed interior painting, our team handles it all.',
     },
   ],
 };
@@ -136,9 +174,12 @@ const fadeInSoft = {
 const staggerSoft = {
   animate: { transition: { staggerChildren: 0.08 } },
 };
+// Add types to config... or just assume for now.
+// Extending config type implicitly for this file.
 
-export default function ThreeDFencing() {
+export default function EliteHomeRepairs() {
   const accent = config.accent.hex;
+  const action = config.action.hex;
   const t = config.theme.colors;
   const isDark = config.theme.isDark;
   const cleanPhone = useMemo(() => config.phone.replace(/\D/g, ''), []);
@@ -153,6 +194,12 @@ export default function ThreeDFencing() {
   const [formError, setFormError] = useState('');
   const [pageUrl, setPageUrl] = useState('');
   const [phoneValue, setPhoneValue] = useState('');
+  const [reviewPage, setReviewPage] = useState(0);
+  const reviewsPerPage = 6;
+  const totalReviewPages = Math.ceil(config.testimonials.length / reviewsPerPage);
+
+  const nextReviewPage = () => setReviewPage((p) => (p + 1) % totalReviewPages);
+  const prevReviewPage = () => setReviewPage((p) => (p - 1 + totalReviewPages) % totalReviewPages);
 
   // Format phone as (XXX) XXX-XXXX
   const formatPhone = (value: string) => {
@@ -248,47 +295,41 @@ export default function ThreeDFencing() {
   const benefits = [
     'Fast response + quick scheduling',
     'Clear, written estimates',
-    '15+ years hands-on experience',
+    '15+ years of home repair experience',
     'Fully insured for your peace of mind',
   ];
   const recentJobs = [
-    { title: 'Secure Chain Link Fencing', meta: 'Houston  -  2 Days', result: 'Durable, cost-effective security solution', image: '/images/pic1.JPG', alt: 'Galvanized chain link fence installation' },
-    { title: 'Commercial Perimeter Security', meta: 'Sugar Land  -  2 Weeks', result: 'Heavy-duty protection for business assets', image: '/images/pic2.JPG', alt: 'Commercial security fencing project' },
-    { title: 'Premium Cedar Privacy Fence', meta: 'The Woodlands  -  3 Days', result: 'Hand-crafted for beauty and privacy', image: '/images/pic3.JPG', alt: 'Custom cedar wood privacy fence' },
-    { title: 'Modern Interior Railings', meta: 'Katy  -  1 Week', result: 'Sleek custom metalwork design', image: '/images/pic4.JPG', alt: 'Modern custom metal railing installation' },
-    { title: 'Custom Driveway Gate', meta: 'Houston  -  4 Days', result: 'Welded iron gate with custom design', image: '/images/pic5front.jpg', image2: '/images/pic5back.jpg', alt: 'Custom iron driveway gate' },
+    { title: 'Full Home Siding Replacement', meta: 'Kingwood  -  5 Days', result: 'Hardie plank installation for lasting durability', image: '/images/project-cedar.webp', alt: 'Hardie plank siding replacement' },
+    { title: 'Roof Repair & Shingle Match', meta: 'Humble  -  1 Day', result: 'Seamless repair after storm damage', image: '/images/project-gate.webp', alt: 'Roof shingle repair' },
+    { title: 'Exterior Painting Refresh', meta: 'The Woodlands  -  3 Days', result: 'Complete exterior repaint with premium weather-proof paint', image: '/images/project-gate-2.webp', alt: 'Exterior home painting' },
+    { title: 'Energy Efficient Windows', meta: 'Spring  -  2 Days', result: 'Double-pane window installation', image: '/images/project-liftmaster.webp', alt: 'New energy efficient windows' },
+    { title: 'Custom Patio Remodel', meta: 'Atascocita  -  1 Week', result: 'Covered patio addition with custom lighting', image: '/images/project-gate.webp', image2: '/images/project-gate-2.webp', alt: 'Custom patio remodel' },
   ];
 
   const allServices = [
     {
-      name: config.primaryService,
-      image: '/images/service-fence.png',
-      desc: 'Expert installation of cedar, chain link, and iron fencing for Houston homes and businesses. We build durable, secure, and beautiful boundaries.',
-      alt: 'Professional fence installation services'
+      name: config.services[0], // Roofing
+      image: '/images/service-repair.webp',
+      desc: 'Expert roof inspections, repairs, and full replacements. We handle storm damage claims and ensure your home is watertight.',
+      alt: 'Professional roofing services'
     },
     {
-      name: config.services[0],
-      image: '/images/service-gate.png',
-      desc: 'Custom-built driveway gates designed for security and curb appeal. Available in wrought iron, wood, and modern metal styles.',
-      alt: 'Custom driveway gate fabrication'
+      name: config.primaryService, // Siding
+      image: '/images/service-fence.webp',
+      desc: 'Premium siding installation including Hardie plank and vinyl. Protect your home and boost curb appeal with durable materials.',
+      alt: 'Siding installation and repair'
     },
     {
-      name: config.services[1],
-      image: '/images/service-access.png',
-      desc: 'Professional installation of LiftMaster electric gate openers and smart access control systems for seamless entry.',
-      alt: 'Automatic gate opener installation'
+      name: config.services[1], // Painting
+      image: '/images/service-access.webp',
+      desc: 'Interior and exterior painting services. meticulous prep work and high-quality paints for a flawless, long-lasting finish.',
+      alt: 'Professional painting services'
     },
     {
-      name: config.services[2],
-      image: '/images/comm.JPG',
-      desc: 'Mobile welding and shop fabrication for custom gates, railings, and structural repairs. High-quality craftsmanship on every weld.',
-      alt: 'Professional welding and fabrication services'
-    },
-    {
-      name: config.services[3],
-      image: '/images/fence_repair.JPG',
-      desc: 'Fast, reliable repair services for leaning fences, broken gates, and malfunctioning openers to keep your property secure.',
-      alt: 'Fence and gate repair services'
+      name: config.services[2], // Windows
+      image: '/images/service-welding.webp',
+      desc: 'Energy-efficient window replacement and installation. Improve insulation and modernize your home look.',
+      alt: 'Window replacement services'
     },
   ];
 
@@ -304,7 +345,7 @@ export default function ThreeDFencing() {
   const promiseDivider = isDark ? t.borderLight : t.border;
 
   return (
-    <div className="relative" style={{ backgroundColor: t.pageBg, color: t.textPrimary }}>
+    <div className="elite-site relative" style={{ backgroundColor: t.pageBg, color: t.textPrimary }}>
       {/* ═══════════════════════════════════════════════════════════════════════
           HEADER - Transparent over hero, solid on scroll
       ═══════════════════════════════════════════════════════════════════════ */}
@@ -318,10 +359,21 @@ export default function ThreeDFencing() {
       >
         <div className={`${shellClass} flex items-center justify-between py-2`}>
           <a href="#" className="flex items-center">
-            <img src="/images/reallogo.svg" alt={config.businessName} className="h-20 w-auto object-contain -my-3 -mr-10 translate-y-2" />
+            <NextImage
+              src="/elitelogo-transparent.svg"
+              alt={config.businessName}
+              width={220}
+              height={64}
+              priority
+              unoptimized
+              className="h-16 w-auto object-contain -mr-3"
+            />
             <div>
-              <span className="text-lg font-bold uppercase tracking-tight" style={{ color: scrolled ? t.textPrimary : 'white' }}>{config.businessName}</span>
-              <div className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: scrolled ? t.textMuted : 'rgba(255,255,255,0.7)' }}>Open 24 Hours</div>
+              <div className="brand-display text-lg font-black uppercase tracking-tight leading-none">
+                <span style={{ color: scrolled ? accent : 'white' }}>ELITE</span>
+                <span className="ml-1.5" style={{ color: scrolled ? action : 'white' }}>HOME REPAIRS</span>
+              </div>
+              <div className="text-[10px] font-bold uppercase tracking-widest mt-0.5" style={{ color: scrolled ? t.textMuted : 'rgba(255,255,255,0.7)' }}>Open 24 Hours</div>
             </div>
           </a>
 
@@ -333,7 +385,7 @@ export default function ThreeDFencing() {
 
           <div className="hidden items-center gap-4 md:flex">
             <a href={`tel:${cleanPhone}`} className="flex items-center gap-2 text-sm font-bold" style={{ color: scrolled ? t.textPrimary : 'white' }}><Phone className="h-4 w-4" />{config.phone}</a>
-            <button onClick={scrollToQuote} className="px-5 py-2.5 text-sm font-bold text-white rounded" style={{ backgroundColor: accent }}>{config.ctaPrimary}</button>
+            <button onClick={scrollToQuote} className="px-5 py-2.5 text-sm font-bold text-white rounded transition-colors hover:shadow-lg hover:brightness-110" style={{ backgroundColor: action }}>{config.ctaPrimary}</button>
           </div>
 
           <button className="md:hidden" style={{ color: scrolled ? t.textPrimary : 'white' }} onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -346,7 +398,7 @@ export default function ThreeDFencing() {
             <motion.div initial={{ height: 0 }} animate={{ height: 'auto' }} exit={{ height: 0 }} className="overflow-hidden border-t px-6 py-4" style={{ backgroundColor: t.cardBg, borderColor: t.border }}>
               <div className="flex flex-col gap-3">
                 {navLinks.map(l => <a key={l.href} href={l.href} className="py-2 font-semibold" style={{ color: t.textPrimary }} onClick={() => setMobileMenuOpen(false)}>{l.label}</a>)}
-                <button onClick={() => { scrollToQuote(); setMobileMenuOpen(false); }} className="mt-2 py-3 text-white font-bold rounded" style={{ backgroundColor: accent }}>{config.ctaPrimary}</button>
+                <button onClick={() => { scrollToQuote(); setMobileMenuOpen(false); }} className="mt-2 py-3 text-white font-bold rounded hover:brightness-110" style={{ backgroundColor: action }}>{config.ctaPrimary}</button>
               </div>
             </motion.div>
           )}
@@ -358,14 +410,23 @@ export default function ThreeDFencing() {
       ═══════════════════════════════════════════════════════════════════════ */}
       <section className="relative min-h-[105vh] flex flex-col overflow-hidden -mt-[72px] pt-[72px]" style={{ minHeight: '108vh' }}>
         {/* Changed background to something more fence/construction related or generic structure */}
-        <div className="absolute inset-0" style={{ backgroundImage: 'url(/images/hero-bg.png)', backgroundPosition: 'center', backgroundSize: 'cover' }} />
+        <div className="absolute inset-0" aria-hidden="true">
+          <NextImage
+            src="/images/hero-bg.webp"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
         <div className="absolute inset-0" style={{ background: 'linear-gradient(90deg, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.85) 50%, rgba(0,0,0,0.75) 100%)' }} />
 
         <div className={`${shellClass} relative z-10 py-12 lg:py-0 flex-1 lg:flex lg:items-center`}>
           <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center w-full pb-20 lg:pb-0">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-8">
               {/* Top Rated Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2" style={{ backgroundColor: accent }}>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full" style={{ backgroundColor: accent }}>
                 <div className="flex">{[1, 2, 3, 4, 5].map(n => <Star key={n} className="h-4 w-4 fill-white text-white" />)}</div>
                 <span className="text-xs font-bold uppercase tracking-wider text-white">Top Rated in {config.city}</span>
               </div>
@@ -375,19 +436,19 @@ export default function ThreeDFencing() {
                 <h1 className="text-5xl font-black leading-[1.05] tracking-tight text-white md:text-6xl lg:text-7xl uppercase">
                   {config.businessName}
                 </h1>
-                <p className="text-xl font-bold uppercase tracking-wider" style={{ color: accent }}>
-                  Houston's Premier Fence Contractor
+                <p className="text-xl font-bold uppercase tracking-wider" style={{ color: action /* Orange highlight */ }}>
+                  Kingwood's Premier Home Remodeling
                 </p>
                 <p className="text-lg leading-relaxed text-slate-300 max-w-lg">
-                  Fast response. Quick scheduling. High-quality craftsmanship.<br />
-                  {years}+ years experience. Fully insured.
+                  Siding. Roofing. Painting. Windows.<br />
+                  Done Right. Done On Time. {years}+ years experience.
                 </p>
               </div>
 
               {/* Trust Stats */}
               <div className="flex flex-wrap gap-8 pt-4">
                 <div><div className="text-4xl font-black text-white">24/7</div><div className="text-xs font-bold uppercase tracking-wider text-slate-400">Availability</div></div>
-                <div><div className="text-4xl font-black" style={{ color: accent }}>{ratingText}</div><div className="text-xs font-bold uppercase tracking-wider text-slate-400">Star Rating</div></div>
+                <div><div className="text-4xl font-black" style={{ color: action }}>{ratingText}</div><div className="text-xs font-bold uppercase tracking-wider text-slate-400">Star Rating</div></div>
                 <div><div className="text-4xl font-black text-white">{years}+</div><div className="text-xs font-bold uppercase tracking-wider text-slate-400">Years Exp</div></div>
               </div>
 
@@ -400,7 +461,7 @@ export default function ThreeDFencing() {
             </motion.div>
 
             {/* Quote Form */}
-            <motion.div id="quote-form" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="rounded-xl p-8 shadow-xl bg-white border-t-4" style={{ borderColor: accent }}>
+            <motion.div id="quote-form" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="rounded-xl p-8 shadow-xl bg-white border-t-4" style={{ borderColor: action }}>
               <div className="flex items-center justify-between mb-2">
                 <h2 className="text-xl font-bold text-slate-900">Get Your Free Estimate</h2>
                 <ShieldCheck className="h-5 w-5 text-emerald-500" />
@@ -434,7 +495,7 @@ export default function ThreeDFencing() {
                       required
                       name="phone"
                       type="tel"
-                      placeholder="(281) 555-0123"
+                      placeholder="(713) 555-0123"
                       value={phoneValue}
                       onChange={(e) => setPhoneValue(formatPhone(e.target.value))}
                       pattern="\(\d{3}\) \d{3}-\d{4}"
@@ -456,8 +517,8 @@ export default function ThreeDFencing() {
                   />
                 </div>
                 <div><label className="block text-xs font-semibold text-slate-700 mb-1">Service Needed *</label><select required name="service" className="w-full rounded-lg border border-slate-200 px-4 py-3 text-sm bg-white text-slate-900"><option value="">Select a service...</option>{[config.primaryService, ...services].map(s => <option key={s} value={s}>{s}</option>)}</select></div>
-                <div><label className="block text-xs font-semibold text-slate-700 mb-1">Project Details</label><textarea name="message" rows={3} placeholder="Describe your project (e.g. 50ft cedar fence)..." className="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 resize-none" /></div>
-                <button type="submit" disabled={formStatus === 'sending'} className="w-full rounded-lg py-4 text-base font-bold text-white shadow-lg disabled:opacity-70" style={{ backgroundColor: accent }}>
+                <div><label className="block text-xs font-semibold text-slate-700 mb-1">Project Details</label><textarea name="message" rows={3} placeholder="Describe your project (e.g. Siding replacement, roof leak...)" className="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 resize-none" /></div>
+                <button type="submit" disabled={formStatus === 'sending'} className="w-full rounded-lg py-4 text-base font-bold text-white shadow-lg disabled:opacity-70 transition-all hover:scale-[1.02] hover:shadow-orange-500/20" style={{ backgroundColor: action }}>
                   {formStatus === 'sending' ? 'Sending...' : 'Request Free Estimate'}
                 </button>
                 {formStatus === 'success' && (
@@ -502,17 +563,17 @@ export default function ThreeDFencing() {
       ═══════════════════════════════════════════════════════════════════════ */}
 
       {/* Services - Clean card list */}
-      <section id="services" className="py-20 scroll-mt-20" style={{ backgroundColor: t.surfaceBg, borderTop: `1px solid ${t.border}` }}>
+      <section id="services" className="py-24 scroll-mt-20" style={{ backgroundColor: '#eff6ff' /* Blue-50 subtle tint */, borderTop: `1px solid ${t.border}` }}>
         <div className={shellClass}>
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>
               <div className="inline-flex items-center gap-2 mb-4">
-                <div className="h-1 w-8" style={{ backgroundColor: accent }} />
-                <p className="text-xs font-bold uppercase tracking-widest" style={{ color: t.textMuted }}>Our Capabilities</p>
+                <div className="h-1 w-8" style={{ backgroundColor: action /* Orange for pop */ }} />
+                <p className="text-xs font-bold uppercase tracking-widest" style={{ color: accent }}>Our Capabilities</p>
               </div>
               <h2 className="text-4xl font-black uppercase tracking-tight" style={{ color: t.textPrimary }}>Our Services</h2>
             </div>
-            <p className="text-sm font-medium font-mono border-l-2 pl-4 py-1 max-w-sm" style={{ color: t.textSecondary, borderColor: accent }}>
+            <p className="text-sm font-medium font-mono border-l-2 pl-4 py-1 max-w-sm" style={{ color: t.textSecondary, borderColor: action }}>
               Full licensed professionals serving {config.city}.<br />Same-week availability for new clients.
             </p>
           </div>
@@ -521,11 +582,14 @@ export default function ThreeDFencing() {
               <motion.div key={service.name} className="group flex flex-col justify-between overflow-hidden shadow-sm transition-all hover:shadow-xl hover:-translate-y-1" style={{ backgroundColor: t.cardBg, border: `1px solid ${t.border}` }}>
                 {/* Service Image Area */}
                 <div className="aspect-[16/9] w-full relative bg-slate-100 flex items-center justify-center overflow-hidden">
-                  <img src={service.image} alt={service.alt} className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200">
+                    <span className="text-7xl font-black leading-none text-slate-300">?</span>
+                    <span className="mt-2 text-[10px] font-bold uppercase tracking-[0.3em] text-slate-500">Photo Coming Soon</span>
+                  </div>
 
                   {/* Overlay title */}
-                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
-                    <span className="text-xs font-mono font-bold text-white opacity-80">SERVICE 0{i + 1}</span>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-slate-900/35 to-transparent">
+                    <span className="text-xs font-mono font-bold text-slate-700 opacity-90">SERVICE 0{i + 1}</span>
                   </div>
                 </div>
 
@@ -536,7 +600,7 @@ export default function ThreeDFencing() {
                   </div>
 
                   <div className="mt-auto pt-4 border-t" style={{ borderColor: t.border }}>
-                    <button type="button" className="w-full py-2 text-xs font-black uppercase tracking-widest flex items-center justify-between group-hover:gap-4 transition-all" style={{ color: accent }} onClick={scrollToQuote}>
+                    <button type="button" className="w-full py-2 text-xs font-black uppercase tracking-widest flex items-center justify-between group-hover:gap-4 transition-all" style={{ color: action }} onClick={scrollToQuote}>
                       <span>Get Quote</span>
                       <span>→</span>
                     </button>
@@ -548,74 +612,112 @@ export default function ThreeDFencing() {
         </div>
       </section>
 
-      {/* Why Us - Clean with flow line */}
-      <section id="why-us" className="relative scroll-mt-20 overflow-hidden" style={{ borderTop: `4px solid ${accent}`, borderBottom: `4px solid ${accent}` }}>
-        <div className="absolute inset-0" style={{ backgroundImage: 'url(/images/why-us-bg.png)', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} />
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.88) 100%)' }} />
-        <div className="relative py-16 z-10">
+      {/* Why Us - Premium Quality Focus */}
+      <section id="why-us" className="relative scroll-mt-20 overflow-hidden">
+        {/* Top Transition - Industrial Arc (seamless from Services) */}
+        <div className="absolute top-0 left-0 right-0 h-16 md:h-24 z-20 overflow-hidden pointer-events-none">
+          <svg viewBox="0 0 1440 120" preserveAspectRatio="none" className="w-full h-full text-blue-50 fill-current" style={{ color: '#eff6ff' }}>
+            <path d="M0,0 L1440,0 L1440,60 L1080,100 L360,100 L0,60 Z" />
+          </svg>
+        </div>
+
+        <div className="absolute inset-0" aria-hidden="true">
+          <NextImage
+            src="/images/whyustest.webp"
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.80) 100%)' }} />
+
+        <div className="relative pt-32 pb-48 md:pb-64 z-10">
           <div className={shellClass}>
-            <div className="grid gap-16 md:grid-cols-2 md:items-start" style={{ alignItems: 'center' }}>
-              <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 border-l-4" style={{ borderColor: accent, backgroundColor: 'rgba(255,255,255,0.05)' }}>
-                  <p className="text-xs font-black uppercase tracking-[0.2em] text-white">Why Choose Us</p>
+            {/* Split Panel Spec Sheet - Industrial Card */}
+            {/* Split Panel Spec Sheet - Industrial Card - Moved Down */}
+            <div className="relative mt-12 md:mt-20 rounded-none border-2 border-slate-700 bg-slate-900 shadow-2xl overflow-hidden flex flex-col md:flex-row isolate">
+              {/* Left Side - Specs & Text */}
+              <div className="flex-1 p-8 md:p-12 flex flex-col justify-center relative z-10">
+                <div className="inline-flex items-center gap-3 mb-6">
+                  <div className="h-1 w-8 bg-orange-500" />
+                  <span className="text-xs font-mono text-orange-500 font-bold tracking-widest uppercase">Specification Sheet</span>
                 </div>
-                <h2 className="text-3xl font-black text-white md:text-5xl leading-[1.1] uppercase tracking-tight">Why Choose Us</h2>
-                <div className="mt-10 space-y-px bg-white/10 border border-white/10">
+
+                <h2 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tight mb-8">
+                  Built on Trust. <br />
+                  <span className="text-slate-500">Driven by Quality.</span>
+                </h2>
+
+                <div className="space-y-0 border-t border-slate-800">
                   {benefits.map((benefit, i) => (
-                    <div key={benefit} className="flex items-center gap-4 p-5 bg-black/40 backdrop-blur-sm group hover:bg-white/5 transition-colors">
-                      <div className="flex bg-white/10 h-8 w-8 shrink-0 items-center justify-center font-mono text-sm font-bold text-white/50 group-hover:bg-white group-hover:text-black transition-colors">0{i + 1}</div>
-                      <span className="text-sm font-bold text-white uppercase tracking-wide pt-0.5">{benefit}</span>
+                    <div key={benefit} className="flex items-center justify-between py-4 border-b border-slate-800 group hover:bg-white/5 transition-colors px-2 -mx-2">
+                      <span className="text-sm font-bold text-slate-300 uppercase tracking-wide group-hover:text-white transition-colors">{benefit}</span>
+                      <Check className="h-4 w-4 text-orange-600 opacity-50 group-hover:opacity-100 transition-opacity" />
                     </div>
                   ))}
+                </div>
+
+                <div className="mt-8 pt-8 flex gap-8">
+                  <div>
+                    <div className="text-3xl font-black text-white leading-none">100%</div>
+                    <div className="text-[10px] font-mono text-slate-500 uppercase mt-1">Written Estimates</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-black text-white leading-none">{years}+</div>
+                    <div className="text-[10px] font-mono text-slate-500 uppercase mt-1">Years Experience</div>
+                  </div>
                 </div>
               </div>
 
-              {/* Right Side - Cleaner, Open Layout */}
-              <div className="pl-4 border-l-2 md:pl-10" style={{ borderColor: accent }}>
-                <div className="mb-10">
-                  <h3 className="text-2xl font-black text-white uppercase tracking-wide mb-2">Our Standard</h3>
-                  <p className="text-white/60 font-medium">We don't just quote the job. We verify the scope, confirm the schedule, and guarantee the result.</p>
-                </div>
+              {/* Right Side - Image Panel */}
+              <div className="relative md:w-1/2 min-h-[400px] md:min-h-full border-t-2 md:border-t-0 md:border-l-2 border-slate-700">
+                <NextImage
+                  src="/images/whyus_popout.webp"
+                  alt="Elite craftsmanship detail"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover grayscale-[30%] sepia-[10%] opacity-80 mix-blend-overlay md:mix-blend-normal"
+                />
+                <div className="absolute inset-0 bg-slate-900/30 md:bg-transparent" />
 
-                <div className="space-y-8">
-                  {[{ label: 'Response Speed', value: 'Fast', desc: 'Quick scheduling' }, { label: 'Estimates', value: 'Always Written', desc: 'Detailed PDF breakdown' }, { label: 'Site Safety', value: '100% Insured', desc: 'Liability & Workers Comp' }].map((item) => (
-                    <div key={item.label}>
-                      <div className="flex items-end justify-between mb-2 border-b border-white/10 pb-2">
-                        <span className="text-xs font-bold uppercase tracking-widest text-white/50">{item.label}</span>
-                        <span className="text-xl font-black font-mono" style={{ color: accent }}>{item.value}</span>
-                      </div>
-                      <div className="text-right text-xs font-bold text-white/40 uppercase">{item.desc}</div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-10 inline-flex items-center gap-3 px-6 py-3 rounded bg-white/5 border border-white/10">
-                  <ShieldCheck className="h-5 w-5" style={{ color: accent }} />
-                  <span className="text-xs font-bold uppercase tracking-widest text-white">Quality Materials & Craftsmanship</span>
+                {/* Quote Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-slate-900/95 via-slate-900/80 to-transparent">
+                  <div className="flex gap-1 mb-2">
+                    {[1, 2, 3, 4, 5].map(i => <Star key={i} className="h-4 w-4 text-orange-500 fill-orange-500" />)}
+                  </div>
+                  <p className="text-lg text-white font-medium italic leading-relaxed font-mono">
+                    "We use the best materials and expert crews. Your home renovation adds lasting value."
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        {/* Bottom Transition - Industrial Chamfer (Inverse) */}
+        <div className="absolute bottom-0 left-0 right-0 h-16 md:h-24 z-20 overflow-hidden pointer-events-none">
+          <svg viewBox="0 0 1440 120" preserveAspectRatio="none" className="w-full h-full text-white fill-current">
+            <path d="M0,120 L1440,120 L1440,60 L1080,20 L360,20 L0,60 Z" />
+          </svg>
+        </div>
       </section>
 
-      {/* Guarantee Section - Better flow, full width accent */}
-      <section className="py-16 text-white" style={{ backgroundColor: accent }}>
+      {/* Guarantee - Industrial Stamp (Overlapping) */}
+      <section className="relative z-30 -mt-32 pb-12">
         <div className={shellClass}>
-          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-            <div className="flex-shrink-0 bg-white/20 p-6 rounded-full">
-              <ShieldCheck className="w-12 h-12 text-white" />
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 border-l-8 border-slate-900 bg-white p-10 md:p-12 shadow-2xl shadow-slate-900/20">
+            <div className="shrink-0 p-5 bg-slate-100 rounded-lg">
+              <ShieldCheck className="w-10 h-10 text-slate-900" />
             </div>
             <div className="flex-1 text-center md:text-left">
-              <h3 className="text-2xl font-black mb-3 uppercase tracking-tight">100% Satisfaction Guarantee</h3>
-              <p className="text-lg font-medium text-white/90 max-w-2xl">
-                We're committed to quality. If you're not happy with our work, we'll make it right - no questions asked.
-                Backed by {years}+ years of service in {config.city}.
+              <h3 className="text-2xl font-black uppercase text-slate-900 mb-3 tracking-tight">The Elite Quality Promise</h3>
+              <p className="text-lg text-slate-600 font-medium leading-relaxed max-w-2xl">
+                If you aren't completely satisfied with our craftsmanship, we will make it right. <span className="text-slate-900 font-bold">No exceptions.</span>
               </p>
             </div>
-            <div className="flex-shrink-0">
-              <button type="button" onClick={scrollToQuote} className="bg-white text-black rounded px-8 py-4 text-sm font-black shadow-xl uppercase tracking-wide hover:scale-105 transition-transform">
-                Get Guaranteed Quote
+            <div className="shrink-0 w-full md:w-auto">
+              <button type="button" onClick={scrollToQuote} className="w-full md:w-auto bg-orange-600 hover:bg-orange-700 text-white text-sm font-black uppercase tracking-widest px-10 py-5 transition-all hover:-translate-y-1 shadow-lg hover:shadow-orange-600/30">
+                Get Your Quote
               </button>
             </div>
           </div>
@@ -623,7 +725,7 @@ export default function ThreeDFencing() {
       </section>
 
       {/* Project Showcase - Carousel Style */}
-      <section id="work" className="py-24 overflow-hidden" style={{ backgroundColor: t.surfaceBg }}>
+      <section id="work" className="pb-24 pt-12 overflow-hidden" style={{ backgroundColor: t.surfaceBg }}>
         <div className={shellClass}>
           <div className="flex items-center justify-between mb-12">
             <div>
@@ -633,37 +735,30 @@ export default function ThreeDFencing() {
 
             <div className="hidden md:flex gap-2">
               <div className="h-1 w-20 rounded-full opacity-20" style={{ backgroundColor: t.textPrimary }} />
-              <div className="h-1 w-4 rounded-full" style={{ backgroundColor: accent }} />
+              <div className="h-1 w-4 rounded-full" style={{ backgroundColor: action }} />
             </div>
           </div>
 
           {/* Snap Scroll Container - Optimized with Next.js Image */}
           <div className="flex overflow-x-auto pb-8 -mx-4 px-4 gap-8 snap-x md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-visible">
-            {recentJobs.map((job, i) => (
+            {recentJobs.map((job) => (
               <div
                 key={job.title}
-                className="snap-center shrink-0 w-[85vw] md:w-auto flex flex-col group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all cursor-pointer hover:-translate-y-2"
-                onClick={() => { setSelectedJob(job); setActiveImage(job.image); }}
+                className="snap-center shrink-0 w-[85vw] md:w-auto flex flex-col group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2"
               >
                 <div className="aspect-[3/2] relative bg-slate-100 flex items-center justify-center overflow-hidden">
-                  <NextImage
-                    src={job.image}
-                    alt={job.alt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent opacity-100 transition-opacity">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200">
+                    <span className="text-8xl font-black leading-none text-slate-300">?</span>
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-slate-900/75 to-transparent opacity-100 transition-opacity">
                     <span className="text-white font-bold text-sm flex items-center gap-2">
-                      <div className="bg-white/20 p-1 rounded-full backdrop-blur-sm"><Check className="h-3 w-3 text-white" /></div>
-                      Tap to view
+                      Photo coming soon
                     </span>
                   </div>
                 </div>
                 <div className="p-6 bg-white flex-1 border-t-0 flex flex-col justify-center">
                   <div className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-1">{job.meta.split('-')[0]}</div>
-                  <h3 className="text-xl font-black text-slate-900 mb-2 leading-tight group-hover:text-blue-600 transition-colors">{job.title}</h3>
+                  <h3 className="text-xl font-black text-slate-900 mb-2 leading-tight group-hover:text-orange-600 transition-colors">{job.title}</h3>
                   <p className="text-sm text-slate-600 line-clamp-2">{job.result}</p>
                 </div>
               </div>
@@ -674,8 +769,16 @@ export default function ThreeDFencing() {
 
       {/* Reviews - Dark Google Themed Section */}
       <section id="proof" className="relative py-24 overflow-hidden" style={{ borderTop: `4px solid ${accent}`, borderBottom: `4px solid ${accent}` }}>
-        <div className="absolute inset-0" style={{ backgroundImage: 'url(/images/reviews-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0" aria-hidden="true">
+          <NextImage
+            src="/images/reviews-bg.webp"
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
+        <div className="absolute inset-0 bg-black/80" />
 
         <div className={`${shellClass} relative z-10`}>
           <div className="flex flex-col items-center justify-center text-center mb-16">
@@ -690,43 +793,83 @@ export default function ThreeDFencing() {
             <p className="text-slate-400 text-lg max-w-2xl">See what your neighbors in {config.city} are saying about our work.</p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {[...config.testimonials, ...config.testimonials].slice(0, 6).map((testimonial, idx) => (
-              <div key={`${testimonial.name}-${idx}`} className="flex flex-col h-full bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md p-6 rounded-xl shadow-2xl border-t-4 hover:-translate-y-1 transition-transform duration-300 border-x border-b border-white/5 relative group" style={{ borderTopColor: idx % 2 === 0 ? '#4285F4' : '#34A853' }}>
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-white/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-xl pointer-events-none" />
-                <div className="flex items-start justify-between mb-4 relative z-10">
-                  <div className="flex items-center gap-3">
-                    <div className="h-10 w-10 rounded-full flex items-center justify-center font-bold text-white text-lg shadow-lg" style={{ backgroundColor: ['#EF4444', '#F59E0B', '#10B981', '#3B82F6', '#8B5CF6'][idx % 5] }}>
-                      {testimonial.name.charAt(0)}
+          <div className="relative">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={reviewPage}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.3 }}
+                className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+              >
+                {config.testimonials.slice(reviewPage * reviewsPerPage, (reviewPage + 1) * reviewsPerPage).map((testimonial, idx) => (
+                  <div key={`${testimonial.name}-${idx}`} className="flex flex-col h-full bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md p-6 rounded-xl shadow-2xl border-t-4 hover:-translate-y-1 transition-transform duration-300 border-x border-b border-white/5 relative group" style={{ borderTopColor: ['#4285F4', '#34A853', '#FBBC05', '#EA4335'][idx % 4] }}>
+                    <div className="absolute inset-0 bg-gradient-to-br from-transparent to-white/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-xl pointer-events-none" />
+                    <div className="flex items-start justify-between mb-4 relative z-10">
+                      <div className="flex items-center gap-3">
+                        <div className="h-10 w-10 rounded-full flex items-center justify-center font-bold text-white text-lg shadow-lg" style={{ backgroundColor: ['#EF4444', '#F59E0B', '#10B981', '#3B82F6', '#8B5CF6'][idx % 5] }}>
+                          {testimonial.name.charAt(0)}
+                        </div>
+                        <div>
+                          <div className="font-bold text-white text-sm">{testimonial.name}</div>
+                          <div className="text-xs text-white/60">
+                            {testimonial.localGuide && 'Local Guide • '}
+                            {testimonial.reviewCount || 1} reviews
+                            {testimonial.photos ? ` • ${testimonial.photos} photos` : ''}
+                          </div>
+                        </div>
+                      </div>
+                      <GoogleLogo className="h-5 w-5 opacity-80" />
                     </div>
-                    <div>
-                      <div className="font-bold text-white text-sm">{testimonial.name}</div>
-                      <div className="text-xs text-white/60">Local Guide • {1 + idx} reviews</div>
+                    <div className="flex gap-1 mb-3 relative z-10">
+                      {[0, 1, 2, 3, 4].map(i => (
+                        <Star key={i} className="h-4 w-4 drop-shadow-sm text-[#FBBC05] fill-[#FBBC05]" />
+                      ))}
+                    </div>
+                    <p className="text-sm text-slate-200 leading-relaxed mb-4 font-medium relative z-10 line-clamp-6">"{testimonial.quote}"</p>
+
+                    <div className="flex flex-wrap gap-2 mt-auto pt-3 border-t border-white/10 relative z-10">
+                      {['Professionalism', 'Punctuality', 'Quality', 'Value'].slice(0, 2 + (idx % 3)).map(tag => (
+                        <span key={tag} className="text-[10px] font-bold text-white/90 uppercase tracking-wide bg-gradient-to-r from-white/10 to-transparent px-2 py-1 rounded border border-white/5">
+                          {tag}
+                        </span>
+                      ))}
                     </div>
                   </div>
-                  <GoogleLogo className="h-5 w-5 opacity-80" />
-                </div>
-                <div className="flex gap-1 mb-3 relative z-10">
-                  {[0, 1, 2, 3, 4].map(i => (
-                    <Star key={i} className="h-4 w-4 drop-shadow-sm text-[#FBBC05] fill-[#FBBC05]" />
-                  ))}
-                  <span className="text-xs text-white/50 ml-2 mt-0.5 font-medium tracking-wide">{idx === 0 ? 'a week ago' : idx === 1 ? 'a month ago' : '2 months ago'}</span>
-                </div>
-                <p className="text-sm text-slate-200 leading-relaxed mb-4 font-medium relative z-10">"{testimonial.quote}"</p>
+                ))}
+              </motion.div>
+            </AnimatePresence>
 
-                <div className="flex flex-wrap gap-2 mt-auto pt-3 border-t border-white/10 relative z-10">
-                  {['Professionalism', 'Punctuality', 'Quality', 'Value'].slice(0, 2 + (idx % 3)).map(tag => (
-                    <span key={tag} className="text-[10px] font-bold text-white/90 uppercase tracking-wide bg-gradient-to-r from-white/10 to-transparent px-2 py-1 rounded border border-white/5">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+            {/* Navigation Buttons */}
+            <div className="flex justify-center mt-8 gap-4">
+              <button
+                onClick={prevReviewPage}
+                className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+                aria-label="Previous reviews"
+              >
+                <ArrowRight className="h-6 w-6 rotate-180" />
+              </button>
+              <div className="flex items-center gap-2">
+                {Array.from({ length: totalReviewPages }).map((_, i) => (
+                  <div
+                    key={i}
+                    className={`h-2 w-2 rounded-full transition-all ${i === reviewPage ? 'bg-white w-4' : 'bg-white/30'}`}
+                  />
+                ))}
               </div>
-            ))}
+              <button
+                onClick={nextReviewPage}
+                className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+                aria-label="Next reviews"
+              >
+                <ArrowRight className="h-6 w-6" />
+              </button>
+            </div>
           </div>
 
           <div className="mt-16 text-center">
-            <a href="https://share.google/ZKEcTBNdQ3BLhJSDe" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-8 py-4 bg-white text-slate-900 rounded-lg font-black uppercase tracking-wide hover:scale-105 transition-transform shadow-lg">
+            <a href="https://share.google/E7Sq2Rf1n6Afv6HJJ" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-8 py-4 bg-white text-slate-900 rounded-lg font-black uppercase tracking-wide hover:scale-105 transition-transform shadow-lg">
               <GoogleLogo className="h-5 w-5" />
               Read all reviews
             </a>
@@ -734,45 +877,33 @@ export default function ThreeDFencing() {
         </div>
       </section>
 
-      {/* Process - Industrial Style */}
-      <section className="py-20 relative bg-zinc-50 border-b border-zinc-200">
+      {/* Process - Professional Steps */}
+      <section className="py-24 relative" style={{ backgroundColor: t.surfaceBg }}>
         <div className={shellClass}>
-          <div className="mb-16 text-center">
-            <div className="inline-block border-b-4 border-zinc-900 pb-2 mb-4">
-              <h2 className="text-3xl font-black uppercase tracking-tight text-zinc-900 md:text-4xl">Our Process</h2>
-            </div>
-            <p className="text-slate-600 font-medium max-w-2xl mx-auto">Precision planning. Expert execution. Zero mess left behind.</p>
+          <div className="mb-20 text-center">
+            <h2 className="text-4xl font-black md:text-5xl mb-6 tracking-tight" style={{ color: t.textPrimary }}>Our Simple Process</h2>
+            <p className="text-lg font-medium max-w-2xl mx-auto leading-relaxed" style={{ color: t.textSecondary }}>
+              From estimate to installation, we make it seamless.
+            </p>
           </div>
 
-          <div className="grid gap-12 md:grid-cols-3 md:gap-8 relative">
-            {/* Connector Line (Desktop) */}
-            <div className="hidden md:block absolute top-12 left-[16%] right-[16%] h-1 bg-zinc-200 z-0" />
-
+          <div className="grid gap-8 md:grid-cols-3">
             {steps.map((step, index) => {
               const Icon = [ClipboardList, Hammer, Check][index];
               return (
                 <div key={step.title} className="relative group">
-                  {/* Card */}
-                  <div className="relative z-10 bg-white border-4 border-zinc-900 p-8 hover:-translate-y-2 transition-transform duration-300 shadow-[8px_8px_0px_rgba(0,0,0,0.1)]">
-                    {/* Number Badge */}
-                    <div className="absolute -top-6 -left-4 text-white font-black text-xl h-12 w-12 flex items-center justify-center border-4 border-white shadow-lg" style={{ backgroundColor: accent }}>
-                      {index + 1}
-                    </div>
-
-                    {/* Icon */}
-                    <div className="mb-6 inline-flex items-center justify-center h-16 w-16 bg-white rounded-full border-2 relative" style={{ borderColor: accent }}>
-                      <Icon className="h-8 w-8" style={{ color: accent }} />
-                    </div>
-
-                    <h3 className="text-xl font-black uppercase tracking-tight mb-3 text-zinc-900 leading-none">{step.title}</h3>
-                    <p className="text-sm font-medium text-slate-600 leading-relaxed">{step.body}</p>
-
-                    {/* Arrow for Industrial Feel */}
-                    {index < 2 && (
-                      <div className="hidden md:block absolute top-1/2 -right-10 transform -translate-y-1/2 z-20">
-                        <ArrowRight className="h-8 w-8 text-zinc-300 -ml-4" />
+                  <div className="relative z-10 bg-white p-10 h-full shadow-2xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-slate-900 hover:border-orange-500">
+                    <div className="flex items-center justify-between mb-8">
+                      {/* Icon */}
+                      <div className="flex items-center justify-center h-16 w-16 bg-slate-50 rounded-none text-slate-900 border border-slate-100 group-hover:bg-orange-50 transition-colors">
+                        <Icon className="h-8 w-8 text-slate-700 group-hover:text-orange-600 transition-colors" />
                       </div>
-                    )}
+                      {/* Number */}
+                      <span className="text-6xl font-black opacity-5 font-sans text-slate-900 group-hover:opacity-10 transition-opacity">0{index + 1}</span>
+                    </div>
+
+                    <h3 className="text-xl font-black mb-4 uppercase tracking-tight" style={{ color: t.textPrimary }}>{step.title}</h3>
+                    <p className="text-base font-medium leading-relaxed text-slate-600">{step.body}</p>
                   </div>
                 </div>
               );
@@ -789,7 +920,7 @@ export default function ThreeDFencing() {
               <p className="text-[10px] font-semibold uppercase tracking-[0.3em] mb-3" style={{ color: accent }}>FAQ</p>
               <h2 className="text-2xl font-bold md:text-3xl" style={{ color: t.textPrimary }}>FAQ</h2>
               <p className="mt-3 text-sm leading-relaxed" style={{ color: t.textMuted }}>Still have questions? Call us directly.</p>
-              <a href={`tel:${cleanPhone}`} className="mt-5 inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg hover:scale-[1.02]" style={{ backgroundColor: accent, boxShadow: `0 4px 12px ${accent}30` }}><Phone className="h-4 w-4" />{config.phone}</a>
+              <a href={`tel:${cleanPhone}`} className="mt-5 inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg hover:scale-[1.02]" style={{ backgroundColor: action, boxShadow: `0 4px 12px ${action}30` }}><Phone className="h-4 w-4" />{config.phone}</a>
             </div>
             <div className="space-y-3">
               {config.faqs.map((faq, i) => (
@@ -821,66 +952,120 @@ export default function ThreeDFencing() {
         </div>
       </section>
 
-      <footer className="bg-zinc-950 text-white pt-16 pb-8 border-t-4" style={{ borderColor: accent }}>
+      {/* ═══════════════════════════════════════════════════════════════════════
+          FOOTER - Industrial Blueprint Style
+      ═══════════════════════════════════════════════════════════════════════ */}
+      {/* ═══════════════════════════════════════════════════════════════════════
+          FOOTER - Premium Architectural Style ("The Estate")
+      ═══════════════════════════════════════════════════════════════════════ */}
+      <footer className="bg-slate-950 text-slate-300 py-20 border-t border-slate-900 font-sans">
         <div className={shellClass}>
-          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4 mb-12">
+          <div className="grid lg:grid-cols-4 gap-12 lg:gap-8">
 
-            {/* Brand Column */}
-            <div className="lg:col-span-1">
-              <div className="flex items-center gap-3 mb-5">
-                <img src="/images/reallogo.svg" alt={config.businessName} className="h-10 w-auto brightness-0 invert" />
-                <span className="text-lg font-black uppercase tracking-tight">{config.businessName}</span>
+            {/* COL 1: IDENTITY & TRUST */}
+            <div className="space-y-6">
+              <NextImage
+                src="/elitelogo-transparent.svg"
+                alt={config.businessName}
+                width={160}
+                height={40}
+                unoptimized
+                className="h-10 w-auto opacity-90"
+              />
+              <p className="text-sm leading-relaxed text-slate-400 max-w-xs">
+                Setting the standard for home renovation in Kingwood. We replace average with exceptional.
+              </p>
+              <div className="flex flex-col gap-2 pt-4">
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-500">
+                  <ShieldCheck className="h-4 w-4 text-emerald-500" />
+                  <span>Licensed & Insured</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-500">
+                  <div className="flex">{[1, 2, 3, 4, 5].map(i => <Star key={i} className="h-3 w-3 text-amber-500 fill-amber-500" />)}</div>
+                  <span>Top Rated Local Pro</span>
+                </div>
               </div>
-              <p className="text-zinc-500 text-sm leading-relaxed max-w-xs">
-                Built on integrity. 15+ years fabricating fences and gates across Houston.
+            </div>
+
+            {/* COL 2: CORE EXPERTISE */}
+            <div>
+              <h4 className="text-sm font-bold text-white uppercase tracking-widest mb-6">Expertise</h4>
+              <ul className="space-y-3 text-sm">
+                {[
+                  'Roofing Systems',
+                  'Siding Replacement',
+                  'Exterior Painting',
+                  'Window Installation',
+                  'Custom Patios',
+                  'Gutters & Drainage',
+                ].map(item => (
+                  <li key={item}>
+                    <a href="#services" className="hover:text-amber-500 transition-colors flex items-center gap-2 group">
+                      <span className="h-px w-0 bg-amber-500 group-hover:w-3 transition-all duration-300" />
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* COL 3: SERVICE AREA */}
+            <div>
+              <h4 className="text-sm font-bold text-white uppercase tracking-widest mb-6">Service Area</h4>
+              <ul className="space-y-4 text-sm text-slate-400">
+                <li className="flex items-start gap-3">
+                  <span className="h-1.5 w-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
+                  <span>
+                    <strong className="text-slate-200 block mb-1">Kingwood (HQ)</strong>
+                    Humble, Atascocita, Porter
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="h-1.5 w-1.5 rounded-full bg-slate-700 mt-1.5 shrink-0" />
+                  <span>
+                    <strong className="text-slate-200 block mb-1">The Woodlands</strong>
+                    Spring, Conroe, Tomball
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="h-1.5 w-1.5 rounded-full bg-slate-700 mt-1.5 shrink-0" />
+                  <span>
+                    <strong className="text-slate-200 block mb-1">Greater Houston</strong>
+                    Katy, Sugar Land, Cypress
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            {/* COL 4: ACTION */}
+            <div>
+              <h4 className="text-sm font-bold text-white uppercase tracking-widest mb-6">Contact</h4>
+              <div className="bg-slate-900 rounded-lg p-6 border border-slate-800">
+                <p className="text-xs font-bold text-slate-500 uppercase mb-2">Speak with an expert</p>
+                <a href={`tel:${cleanPhone}`} className="block text-2xl font-bold text-white mb-6 hover:text-amber-500 transition-colors">{config.phone}</a>
+                <p className="text-xs text-slate-400 mb-6 leading-relaxed">{config.address}</p>
+
+                <button
+                  onClick={scrollToQuote}
+                  className="w-full py-3 bg-white text-slate-950 text-xs font-black uppercase tracking-widest rounded transition-all hover:bg-amber-500 hover:text-white"
+                >
+                  Request Quote
+                </button>
+              </div>
+              <p className="text-[10px] text-slate-600 mt-4 text-center">
+                Response within 15 minutes during business hours.
               </p>
             </div>
 
-            {/* Quick Links */}
-            <div>
-              <h4 className="text-xs font-black uppercase tracking-widest mb-5 text-zinc-500">Navigate</h4>
-              <ul className="space-y-3 text-sm text-zinc-400">
-                <li><a href="#services" className="hover:text-white transition-colors">Our Services</a></li>
-                <li><a href="#why-us" className="hover:text-white transition-colors">Why 3D Fence</a></li>
-                <li><a href="#work" className="hover:text-white transition-colors">Project Gallery</a></li>
-                <li><a href="#proof" className="hover:text-white transition-colors">Reviews</a></li>
-                <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
-              </ul>
-            </div>
-
-            {/* Services SEO */}
-            <div>
-              <h4 className="text-xs font-black uppercase tracking-widest mb-5 text-zinc-500">What We Build</h4>
-              <ul className="space-y-3 text-sm text-zinc-400">
-                <li>Wood & Cedar Fencing</li>
-                <li>Wrought Iron Gates</li>
-                <li>Chain Link & Security</li>
-                <li>Gate Automation</li>
-                <li>Custom Welding & Repair</li>
-              </ul>
-            </div>
-
-            {/* Contact */}
-            <div>
-              <h4 className="text-xs font-black uppercase tracking-widest mb-5 text-zinc-500">Get In Touch</h4>
-              <ul className="space-y-4 text-sm text-zinc-400">
-                <li>
-                  <a href={`tel:${cleanPhone}`} className="text-xl font-black text-white hover:opacity-80 transition-opacity">{config.phone}</a>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-emerald-500" />
-                  <span>Available 24/7</span>
-                </li>
-                <li className="text-zinc-600 text-xs pt-2">Houston • Katy • Sugar Land • The Woodlands</li>
-              </ul>
-            </div>
           </div>
 
-          <div className="pt-6 border-t border-zinc-800/50 flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] text-zinc-700 uppercase tracking-widest">
-            <p>&copy; {new Date().getFullYear()} {config.businessName}</p>
-            <a href="https://quicklaunchweb.us" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-500 transition-colors">
-              Site by QuickLaunchWeb
-            </a>
+          <div className="mt-20 pt-8 border-t border-slate-900 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-600">
+            <p>&copy; {new Date().getFullYear()} {config.businessName}. All rights reserved.</p>
+            <p className="flex items-center gap-4">
+              <a href="#" className="hover:text-slate-400 transition-colors">Privacy Policy</a>
+              <span className="h-3 w-px bg-slate-800" />
+              <span className="text-slate-500">Elite Home Repairs</span>
+            </p>
           </div>
         </div>
       </footer>
