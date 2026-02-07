@@ -18,7 +18,7 @@ const config = {
   primaryService: 'Siding Replacement & Repair',
   services: ['Roofing Services', 'Professional Painting', 'Window Replacement'],
   rating: 5.0,
-  reviewCount: 120,
+  reviewCount: 50,
   yearsInBusiness: 15,
   ctaPrimary: 'Request a Quote',
 
@@ -133,7 +133,7 @@ const config = {
     },
     {
       q: 'What areas do you serve?',
-      a: 'Our main hub is Kingwood, but we serve Humble, The Woodlands, Houston, Spring, and Atascocita.',
+      a: 'Our main hub is Kingwood, and we also help homeowners in Humble, The Woodlands, Houston, Spring, Atascocita, Porter, Conroe, Tomball, Katy, Sugar Land, and Cypress.',
     },
     {
       q: 'Are you insured?',
@@ -345,7 +345,7 @@ export default function EliteHomeRepairs() {
   const promiseDivider = isDark ? t.borderLight : t.border;
 
   return (
-    <div className="elite-site relative" style={{ backgroundColor: t.pageBg, color: t.textPrimary }}>
+    <div id="top" className="elite-site relative" style={{ backgroundColor: t.pageBg, color: t.textPrimary }}>
       {/* ═══════════════════════════════════════════════════════════════════════
           HEADER - Transparent over hero, solid on scroll
       ═══════════════════════════════════════════════════════════════════════ */}
@@ -358,7 +358,7 @@ export default function EliteHomeRepairs() {
         }}
       >
         <div className={`${shellClass} flex items-center justify-between py-2`}>
-          <a href="#" className="flex items-center">
+          <a href="#top" className="flex items-center">
             <NextImage
               src="/elitelogo-transparent.svg"
               alt={config.businessName}
@@ -373,7 +373,7 @@ export default function EliteHomeRepairs() {
                 <span style={{ color: scrolled ? accent : 'white' }}>ELITE</span>
                 <span className="ml-1.5" style={{ color: scrolled ? action : 'white' }}>HOME REPAIRS</span>
               </div>
-              <div className="text-[10px] font-bold uppercase tracking-widest mt-0.5" style={{ color: scrolled ? t.textMuted : 'rgba(255,255,255,0.7)' }}>Open 24 Hours</div>
+              <div className="text-[10px] font-bold uppercase tracking-widest mt-0.5" style={{ color: scrolled ? t.textMuted : 'rgba(255,255,255,0.7)' }}>Mon-Sat 7AM-8PM</div>
             </div>
           </a>
 
@@ -427,29 +427,29 @@ export default function EliteHomeRepairs() {
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-8">
               {/* Top Rated Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full" style={{ backgroundColor: accent }}>
-                <div className="flex">{[1, 2, 3, 4, 5].map(n => <Star key={n} className="h-4 w-4 fill-white text-white" />)}</div>
-                <span className="text-xs font-bold uppercase tracking-wider text-white">Top Rated in {config.city}</span>
+                <div className="flex">{[1, 2, 3, 4, 5].map(n => <Star key={n} className="h-4 w-4 fill-amber-400 text-amber-400 drop-shadow-sm" />)}</div>
+                <span className="text-xs font-bold uppercase tracking-widest text-white">Top Rated in {config.city}</span>
               </div>
 
               {/* Headline */}
               <div className="space-y-4">
-                <h1 className="text-5xl font-black leading-[1.05] tracking-tight text-white md:text-6xl lg:text-7xl uppercase">
+                <h1 className="text-5xl font-black leading-[1.05] tracking-normal text-white md:text-6xl lg:text-7xl uppercase">
                   {config.businessName}
                 </h1>
-                <p className="text-xl font-bold uppercase tracking-wider" style={{ color: action /* Orange highlight */ }}>
-                  Kingwood's Premier Home Remodeling
+                <p className="text-xl font-bold uppercase tracking-widest" style={{ color: action /* Orange highlight */ }}>
+                  Trusted Home Repairs for Kingwood Homeowners
                 </p>
                 <p className="text-lg leading-relaxed text-slate-300 max-w-lg">
-                  Siding. Roofing. Painting. Windows.<br />
-                  Done Right. Done On Time. {years}+ years experience.
+                  Protect your home with reliable siding, roofing, painting, and window work.<br />
+                  Clear estimates. Clean job sites. {years}+ years of experience.
                 </p>
               </div>
 
               {/* Trust Stats */}
               <div className="flex flex-wrap gap-8 pt-4">
-                <div><div className="text-4xl font-black text-white">24/7</div><div className="text-xs font-bold uppercase tracking-wider text-slate-400">Availability</div></div>
-                <div><div className="text-4xl font-black" style={{ color: action }}>{ratingText}</div><div className="text-xs font-bold uppercase tracking-wider text-slate-400">Star Rating</div></div>
-                <div><div className="text-4xl font-black text-white">{years}+</div><div className="text-xs font-bold uppercase tracking-wider text-slate-400">Years Exp</div></div>
+                <div><div className="text-4xl font-black text-white tracking-wide">Mon-Sat</div><div className="text-xs font-bold uppercase tracking-widest text-slate-400">7AM-8PM</div></div>
+                <div><div className="text-4xl font-black tracking-wide" style={{ color: action }}>{ratingText}</div><div className="text-xs font-bold uppercase tracking-widest text-slate-400">Star Rating</div></div>
+                <div><div className="text-4xl font-black text-white tracking-wide">{years}+</div><div className="text-xs font-bold uppercase tracking-widest text-slate-400">Years Exp</div></div>
               </div>
 
               {/* Trust Badges */}
@@ -535,7 +535,7 @@ export default function EliteHomeRepairs() {
               <div className="mt-6 flex items-center justify-center gap-3 pt-4 border-t border-slate-100">
                 <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" /><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" /><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" /><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" /></svg>
                 <div className="flex">{[1, 2, 3, 4, 5].map(n => <Star key={n} className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />)}</div>
-                <span className="text-sm font-bold text-slate-900">{ratingText}</span><span className="text-slate-300">|</span><span className="text-sm font-medium text-slate-500">{reviewCount}+ Jobs Done</span>
+                <span className="text-sm font-bold text-slate-900">{ratingText}</span><span className="text-slate-300">|</span><span className="text-sm font-medium text-slate-500">{reviewCount}+ Google Reviews</span>
               </div>
             </motion.div>
           </div>
@@ -941,9 +941,9 @@ export default function EliteHomeRepairs() {
       <section id="home-cta" className="py-16 border-t-3" style={{ borderColor: accent, backgroundColor: accent }}>
         <div className={`${shellClass} flex flex-col gap-6 md:flex-row md:items-center md:justify-between`}>
           <div>
-            <h2 className="text-4xl font-black uppercase tracking-tight md:text-5xl text-white">Get Your Free Quote</h2>
-            <p className="mt-4 text-xl font-bold text-white">Free estimate - Custom Designs - Durable Results</p>
-            <p className="mt-2 text-base font-medium text-white/90">Serving {config.city} and surrounding areas</p>
+            <h2 className="text-4xl font-black uppercase tracking-tight md:text-5xl text-white">Get Your Free Home Repair Estimate</h2>
+            <p className="mt-4 text-xl font-bold text-white">Protect your home with durable, high-quality work</p>
+            <p className="mt-2 text-base font-medium text-white/90">Serving homeowners in Kingwood, Humble, The Woodlands, Spring, Atascocita, and Houston</p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-shrink-0">
             <button type="button" className="rounded px-8 py-4 text-base font-black shadow-xl uppercase tracking-wide transition-all hover:scale-105" style={{ backgroundColor: 'white', color: accent }} onClick={scrollToQuote}>{config.ctaPrimary}</button>
@@ -1017,21 +1017,21 @@ export default function EliteHomeRepairs() {
                   <span className="h-1.5 w-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
                   <span>
                     <strong className="text-slate-200 block mb-1">Kingwood (HQ)</strong>
-                    Humble, Atascocita, Porter
+                    Humble, Atascocita, Porter - fast help for siding and exterior repairs.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="h-1.5 w-1.5 rounded-full bg-slate-700 mt-1.5 shrink-0" />
                   <span>
                     <strong className="text-slate-200 block mb-1">The Woodlands</strong>
-                    Spring, Conroe, Tomball
+                    Spring, Conroe, Tomball - trusted roofing, painting, and window updates.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="h-1.5 w-1.5 rounded-full bg-slate-700 mt-1.5 shrink-0" />
                   <span>
                     <strong className="text-slate-200 block mb-1">Greater Houston</strong>
-                    Katy, Sugar Land, Cypress
+                    Houston, Katy, Sugar Land, Cypress - dependable repairs that protect home value.
                   </span>
                 </li>
               </ul>
@@ -1062,9 +1062,7 @@ export default function EliteHomeRepairs() {
           <div className="mt-20 pt-8 border-t border-slate-900 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-600">
             <p>&copy; {new Date().getFullYear()} {config.businessName}. All rights reserved.</p>
             <p className="flex items-center gap-4">
-              <a href="#" className="hover:text-slate-400 transition-colors">Privacy Policy</a>
-              <span className="h-3 w-px bg-slate-800" />
-              <span className="text-slate-500">Elite Home Repairs</span>
+              <span className="text-slate-500">Website by <a href="https://quicklaunchweb.us" target="_blank" rel="noopener noreferrer" className="hover:text-amber-500 transition-colors">QuickLaunchWeb</a></span>
             </p>
           </div>
         </div>

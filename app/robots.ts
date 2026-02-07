@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: 'https://www.elitehomerepairs.com/sitemap.xml',
+        sitemap: 'https://elitehomerepairs.us/sitemap.xml',
     };
 }

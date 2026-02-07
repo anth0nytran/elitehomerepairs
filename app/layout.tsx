@@ -24,20 +24,23 @@ const monoFont = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.elitehomerepairs.com'), // Placeholder URL, user didn't provide one
-  title: "Elite Home Repairs | Kingwood & Houston Home Remodeling | (713) 283-8138",
-  description: "Premier home repair and remodeling in Kingwood, Humble, and The Woodlands. Specializing in siding, roofing, painting, and window installation. Free estimates!",
+  metadataBase: new URL('https://elitehomerepairs.us'),
+  title: "Home Repair Contractor in Kingwood, TX | Elite Home Repairs",
+  description: "Helping homeowners in Kingwood, Humble, The Woodlands, Spring, Atascocita, and Houston with siding, roofing, painting, and window repairs. Licensed, insured, and free estimates.",
+  alternates: {
+    canonical: '/',
+  },
   keywords: ["Home Repairs Kingwood", "Siding Installation", "Roofing Contractor", "Painting Services", "Window Replacement", "Elite Home Repairs", "Houston Home Remodeling"],
   openGraph: {
-    title: "Elite Home Repairs | Expert Siding, Roofing & Painting",
-    description: "Premium quality home repairs and remodeling in Houston. Siding, roofing, painting, and windows done right. Call Jose Castillo today.",
-    url: 'https://www.elitehomerepairs.com',
+    title: "Kingwood Home Repair Services for Homeowners | Elite Home Repairs",
+    description: "Trusted siding, roofing, painting, and window repairs for homeowners in Kingwood and nearby service areas. Call for a free estimate.",
+    url: 'https://elitehomerepairs.us',
     siteName: 'Elite Home Repairs',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: '/images/hero-bg.png', // Keeping existing image path as placeholder or if generic
+        url: '/images/hero-bg.webp',
         width: 1200,
         height: 630,
         alt: 'Elite Home Repairs - Premium Craftsmanship',
@@ -46,14 +49,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Elite Home Repairs | Kingwood's Trusted Contractor",
-    description: "Expert siding, roofing, painting, and window services in Kingwood & Houston. Licensed & Insured.",
-    images: ['/images/hero-bg.png'],
+    title: "Kingwood Home Repair Services | Elite Home Repairs",
+    description: "Helping homeowners protect and improve their homes with siding, roofing, painting, and window services.",
+    images: ['/images/hero-bg.webp'],
   },
   icons: {
-    icon: '/elitelogo-transparent.png',
-    shortcut: '/elitelogo-transparent.png',
-    apple: '/elitelogo-transparent.png',
+    icon: '/icon.png',
+    shortcut: '/icon.png',
+    apple: '/icon.png',
   },
 };
 
@@ -75,11 +78,11 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "Elite Home Repairs",
-              "image": "https://www.elitehomerepairs.com/images/hero-bg.png",
-              "@id": "https://www.elitehomerepairs.com",
-              "url": "https://www.elitehomerepairs.com",
+              "image": "https://elitehomerepairs.us/images/hero-bg.webp",
+              "@id": "https://elitehomerepairs.us",
+              "url": "https://elitehomerepairs.us",
               "telephone": "+17132838138",
-              "description": "Premium home repair services in Kingwood and Houston. Siding, roofing, painting, windows.",
+              "description": "Home repair services for homeowners in Kingwood and surrounding Houston areas. Siding, roofing, painting, and windows.",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "4102 Valley Haven Dr",
@@ -99,7 +102,13 @@ export default function RootLayout({
                 { "@type": "City", "name": "The Woodlands" },
                 { "@type": "City", "name": "Houston" },
                 { "@type": "City", "name": "Spring" },
-                { "@type": "City", "name": "Atascocita" }
+                { "@type": "City", "name": "Atascocita" },
+                { "@type": "City", "name": "Porter" },
+                { "@type": "City", "name": "Conroe" },
+                { "@type": "City", "name": "Tomball" },
+                { "@type": "City", "name": "Katy" },
+                { "@type": "City", "name": "Sugar Land" },
+                { "@type": "City", "name": "Cypress" }
               ],
               "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",
