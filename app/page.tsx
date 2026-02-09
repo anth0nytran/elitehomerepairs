@@ -66,11 +66,170 @@ const config = {
 
   testimonials: [
     {
+      quote: "Elite Home Repairs replaced all of the siding and rotted wood on the exterior of my two story home... From the promptness of Jose to meet with us and provide a quote, to the beautiful finished appearance... We get so many complements on our home!",
+      name: 'Jane Verkerk',
+      highlight: 'They added the small professional touches that made a siding job a work of art!',
+      reviewCount: 6,
+    },
+    {
+      quote: "Arrived on time daily, cleaned up each day, and completed a two-week siding and trim replacement project beautifully. Highly recommend.",
+      name: 'Lisa H.',
+      highlight: 'Completed a two-week siding and trim replacement project beautifully',
+      reviewCount: 2,
+    },
+    {
+      quote: "Very responsive with great communication and scheduling. The crew arrived on time and completed high-quality repairs including wood rot issues, exterior trim replacement, and painting to match. Highly professional work.",
+      name: 'Cole S.',
+      highlight: 'Completed high-quality repairs including wood rot issues',
+      reviewCount: 4,
+    },
+    {
+      quote: "The company arrived promptly, completed siding and eave repairs, painted to match the house color, and exceeded my expectations. Pricing was fair and the area was cleaned thoroughly. Highly recommended and will call again.",
+      name: 'Karen C.',
+      highlight: 'Exceeded my expectations',
+      reviewCount: 5,
+    },
+    {
+      quote: "Clear estimate, great communication, timely work, and excellent cleanup. Repairs took three days and the house looks great. Highly recommend.",
+      name: 'Diane W.',
+      highlight: 'Repairs took three days and the house looks great',
+      reviewCount: 3,
+    },
+    {
+      quote: "Great communication, daily cleanup, flexible with changes, and excellent workmanship. Will hire again despite being booked out.",
+      name: 'John H.',
+      highlight: 'Excellent workmanship',
+      reviewCount: 8,
+    },
+    {
+      quote: "Highly recommend. Siding replacement was beautiful with outstanding attention to detail and workmanship.",
+      name: 'Jane G.',
+      highlight: 'Siding replacement was beautiful',
+      reviewCount: 2,
+    },
+    {
       quote: "Can’t say enough about Elite Home Repair... Within a minute, Jose was contacting me... The guys came out riding early... Side wall of my house matched up the exact color Scheme... It is as if my side wall to my house was never missing... Highly recommend Jose and his crew.",
       name: 'Terrance Matthews',
       highlight: 'It is as if my side wall to my house was never missing',
       reviewCount: 6,
       photos: 3,
+    },
+    {
+      quote: "Fast response and excellent work. The crew cleaned up everything when finished and completed repairs very quickly. Superb job.",
+      name: 'Sherry M.',
+      highlight: 'Fast response and excellent work',
+      reviewCount: 1,
+    },
+    {
+      quote: "Went above and beyond to address minor issues. Very hardworking and affable, and even showed me how to handle some things myself to save money.",
+      name: 'Ben K.',
+      highlight: 'Went above and beyond to address minor issues',
+      reviewCount: 3,
+    },
+    {
+      quote: "Quick response and great results. The work looks like new. Would definitely hire again.",
+      name: 'Neil D.',
+      highlight: 'The work looks like new',
+      reviewCount: 2,
+    },
+    {
+      quote: "Honest and trustworthy. Did an excellent job and would highly recommend.",
+      name: 'Terry B.',
+      highlight: 'Honest and trustworthy',
+      reviewCount: 4,
+    },
+    {
+      quote: "They completed unfinished work left by someone else and did a great job. Will definitely hire again.",
+      name: 'Toni T.',
+      highlight: 'Completed unfinished work left by someone else',
+      reviewCount: 1,
+    },
+    {
+      quote: "Great job fixing my siding issue. Fair pricing, quick turnaround, and excellent service all around.",
+      name: 'Miguel D.',
+      highlight: 'Fair pricing, quick turnaround',
+      reviewCount: 5,
+    },
+    {
+      quote: "Delivered as promised. Excellent work repainting the entire exterior of the house and replacing rotted wood.",
+      name: 'Robert C.',
+      highlight: 'Delivered as promised',
+      reviewCount: 2,
+    },
+    {
+      quote: "Work was completed well and on schedule.",
+      name: 'Glenn M.',
+      highlight: 'Completed well and on schedule',
+      reviewCount: 1,
+    },
+    {
+      quote: "Fast, high-quality work. Will definitely use again and recommend to others.",
+      name: 'Jeff H.',
+      highlight: 'Fast, high-quality work',
+      reviewCount: 3,
+    },
+    {
+      quote: "Easy to work with, stayed on schedule from estimate through completion, handled all requests, and delivered quality work at a reasonable cost.",
+      name: 'Renee C.',
+      highlight: 'Delivered quality work at a reasonable cost',
+      reviewCount: 4,
+    },
+    {
+      quote: "Removed and replaced rotted crown molding efficiently. Work was completed on time and the area was cleaned thoroughly. Would hire again.",
+      name: 'Carolyn E.',
+      highlight: 'Removed and replaced rotted crown molding efficiently',
+      reviewCount: 2,
+    },
+    {
+      quote: "A little expensive, but the quality of work made it worth it. Would definitely hire again.",
+      name: 'Paul W.',
+      highlight: 'Quality of work made it worth it',
+      reviewCount: 6,
+    },
+    {
+      quote: "Very professional and accommodating, even with changes and special requests.",
+      name: 'Calma J.',
+      highlight: 'Very professional and accommodating',
+      reviewCount: 1,
+    },
+    {
+      quote: "Excellent siding repairs. Professional, friendly, and highly recommended for home improvement needs.",
+      name: 'Bryan J.',
+      highlight: 'Excellent siding repairs',
+      reviewCount: 3,
+    },
+    {
+      quote: "True professional. Competitive pricing, fast completion, and quality work worth the cost. Highly recommend for siding replacement.",
+      name: 'Jeffrey S.',
+      highlight: 'Quality work worth the cost',
+      reviewCount: 5,
+    },
+    {
+      quote: "Completed the job in two days as promised, cleaned the site, and made sure everything was done to satisfaction.",
+      name: 'Richard R.',
+      highlight: 'Completed the job in two days as promised',
+      reviewCount: 2,
+    },
+    {
+      quote: "On time, polite, professional, efficient. Everything you want with a crew. Great job! Good price! I'll definitely use Elite Home Repairs again! (Repaired, replaced and painted my facia boards for the whole house in one day)",
+      name: 'Russell Dozier',
+      highlight: 'On time, polite, professional, efficient',
+      localGuide: true,
+      reviewCount: 19,
+      photos: 3,
+    },
+    {
+      quote: "Reasonable price. I contacted Elite Home Repairs to inquire about a window repair. Jose responded the same day... He and his crew came the following week and completed the job in less than 2 hours.",
+      name: 'Rebecca Havely',
+      highlight: 'Completed the job in less than 2 hours',
+      reviewCount: 6,
+      photos: 9,
+    },
+    {
+      quote: "This is 2nd time we brought them back to work on our house they are fast & remarkable of how well they work... Workers are very polite and alert to not leaving any mess behind... We Will be bringing them back again for more projects",
+      name: 'Sherry Murray',
+      highlight: 'Workers are very polite and alert to not leaving any mess behind',
+      reviewCount: 4,
     },
     {
       quote: "Great price. I contacted the company I used to replace the siding on my home because there were a couple of things that needed attention. Jose came out and took care of the problem... I am satisfied and would recommend them to my friends and neighbors.",
@@ -83,33 +242,6 @@ const config = {
       name: 'Carlos Sierra',
       highlight: 'Reasonable price',
       reviewCount: 7,
-    },
-    {
-      quote: "This is 2nd time we brought them back to work on our house they are fast & remarkable of how well they work... Workers are very polite and alert to not leaving any mess behind... We Will be bringing them back again for more projects",
-      name: 'Sherry Murray',
-      highlight: 'Workers are very polite and alert to not leaving any mess behind',
-      reviewCount: 4,
-    },
-    {
-      quote: "Reasonable price. I contacted Elite Home Repairs to inquire about a window repair. Jose responded the same day... He and his crew came the following week and completed the job in less than 2 hours.",
-      name: 'Rebecca Havely',
-      highlight: 'Completed the job in less than 2 hours',
-      reviewCount: 6,
-      photos: 9,
-    },
-    {
-      quote: "Elite Home Repairs replaced all of the siding and rotted wood on the exterior of my two story home... From the promptness of Jose to meet with us and provide a quote, to the beautiful finished appearance... We get so many complements on our home!",
-      name: 'Jane Verkerk',
-      highlight: 'They added the small professional touches that made a siding job a work of art!',
-      reviewCount: 6,
-    },
-    {
-      quote: "On time, polite, professional, efficient. Everything you want with a crew. Great job! Good price! I'll definitely use Elite Home Repairs again! (Repaired, replaced and painted my facia boards for the whole house in one day)",
-      name: 'Russell Dozier',
-      highlight: 'On time, polite, professional, efficient',
-      localGuide: true,
-      reviewCount: 19,
-      photos: 3,
     },
     {
       quote: "Jose did a great job and was able to accommodate my time crunch",
@@ -309,25 +441,25 @@ export default function EliteHomeRepairs() {
   const allServices = [
     {
       name: config.services[0], // Roofing
-      image: '/images/service-repair.webp',
+      image: '/images/service-roofing.png',
       desc: 'Expert roof inspections, repairs, and full replacements. We handle storm damage claims and ensure your home is watertight.',
       alt: 'Professional roofing services'
     },
     {
       name: config.primaryService, // Siding
-      image: '/images/service-fence.webp',
+      image: '/images/service-siding.png',
       desc: 'Premium siding installation including Hardie plank and vinyl. Protect your home and boost curb appeal with durable materials.',
       alt: 'Siding installation and repair'
     },
     {
       name: config.services[1], // Painting
-      image: '/images/service-access.webp',
+      image: '/images/service-painting.png',
       desc: 'Interior and exterior painting services. meticulous prep work and high-quality paints for a flawless, long-lasting finish.',
       alt: 'Professional painting services'
     },
     {
       name: config.services[2], // Windows
-      image: '/images/service-welding.webp',
+      image: '/images/service-windows.png',
       desc: 'Energy-efficient window replacement and installation. Improve insulation and modernize your home look.',
       alt: 'Window replacement services'
     },
@@ -582,14 +714,18 @@ export default function EliteHomeRepairs() {
               <motion.div key={service.name} className="group flex flex-col justify-between overflow-hidden shadow-sm transition-all hover:shadow-xl hover:-translate-y-1" style={{ backgroundColor: t.cardBg, border: `1px solid ${t.border}` }}>
                 {/* Service Image Area */}
                 <div className="aspect-[16/9] w-full relative bg-slate-100 flex items-center justify-center overflow-hidden">
-                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200">
-                    <span className="text-7xl font-black leading-none text-slate-300">?</span>
-                    <span className="mt-2 text-[10px] font-bold uppercase tracking-[0.3em] text-slate-500">Photo Coming Soon</span>
-                  </div>
+                  <NextImage
+                    src={service.image}
+                    alt={service.alt}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/55 via-slate-900/15 to-transparent" />
 
                   {/* Overlay title */}
                   <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-slate-900/35 to-transparent">
-                    <span className="text-xs font-mono font-bold text-slate-700 opacity-90">SERVICE 0{i + 1}</span>
+                    <span className="text-xs font-mono font-bold text-white/90">SERVICE 0{i + 1}</span>
                   </div>
                 </div>
 
@@ -617,7 +753,7 @@ export default function EliteHomeRepairs() {
         {/* Top Transition - Industrial Arc (seamless from Services) */}
         <div className="absolute top-0 left-0 right-0 h-16 md:h-24 z-20 overflow-hidden pointer-events-none">
           <svg viewBox="0 0 1440 120" preserveAspectRatio="none" className="w-full h-full text-blue-50 fill-current" style={{ color: '#eff6ff' }}>
-            <path d="M0,0 L1440,0 L1440,60 L1080,100 L360,100 L0,60 Z" />
+            <path d="M0,0 L1440,0 L1440,40 Q720,120 0,40 Z" />
           </svg>
         </div>
 
@@ -697,7 +833,7 @@ export default function EliteHomeRepairs() {
         {/* Bottom Transition - Industrial Chamfer (Inverse) */}
         <div className="absolute bottom-0 left-0 right-0 h-16 md:h-24 z-20 overflow-hidden pointer-events-none">
           <svg viewBox="0 0 1440 120" preserveAspectRatio="none" className="w-full h-full text-white fill-current">
-            <path d="M0,120 L1440,120 L1440,60 L1080,20 L360,20 L0,60 Z" />
+            <path d="M0,120 L1440,120 L1440,80 Q720,0 0,80 Z" />
           </svg>
         </div>
       </section>
@@ -804,7 +940,7 @@ export default function EliteHomeRepairs() {
                 className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
               >
                 {config.testimonials.slice(reviewPage * reviewsPerPage, (reviewPage + 1) * reviewsPerPage).map((testimonial, idx) => (
-                  <div key={`${testimonial.name}-${idx}`} className="flex flex-col h-full bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md p-6 rounded-xl shadow-2xl border-t-4 hover:-translate-y-1 transition-transform duration-300 border-x border-b border-white/5 relative group" style={{ borderTopColor: ['#4285F4', '#34A853', '#FBBC05', '#EA4335'][idx % 4] }}>
+                  <div key={`${testimonial.name}-${idx}`} className="flex flex-col h-[22rem] bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md p-6 rounded-xl shadow-2xl border-t-4 hover:-translate-y-1 transition-transform duration-300 border-x border-b border-white/5 relative group" style={{ borderTopColor: ['#4285F4', '#34A853', '#FBBC05', '#EA4335'][idx % 4] }}>
                     <div className="absolute inset-0 bg-gradient-to-br from-transparent to-white/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-xl pointer-events-none" />
                     <div className="flex items-start justify-between mb-4 relative z-10">
                       <div className="flex items-center gap-3">
